@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fluxo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <%= link_to "Dashboard", users_dashboard_path %> |
+        <%= link_to "Categorias", users_categories_path %> |
+        <%= link_to "Cartões", users_credit_cards_path %> |
+        <%= link_to "Planos Pagos", public_pricing_path %> |
+        <%= link_to "Assinatura", users_subscription_path %> |
+        <%= button_to "Sair", destroy_user_session_path, method: :delete %>
+      </nav>
+    </header>
+
+    <% if notice %>
+      <p><%= notice %></p>
+    <% end %>
+
+    <% if alert %>
+      <p><%= alert %></p>
+    <% end %>
+
+    <main>
+      <%= yield %>
+    </main>
+  </body>
+</html>
