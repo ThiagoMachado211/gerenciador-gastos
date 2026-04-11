@@ -1,6 +1,6 @@
 require "active_support/core_ext/integer/time"
 
-Rails.application.configure do require
+Rails.application.configure do
   config.action_cable.mount_path = "/cable"
   config.action_controller.perform_caching = true
   config.action_mailer.default_url_options = { host: "example.com" }
