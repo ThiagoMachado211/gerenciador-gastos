@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root "public/home#index"
 
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: "users/sessions",
+    registrations: "users/registrations"
+  }
 
   namespace :public do
     get "planos-pagos", to: "pricing#index", as: :pricing
