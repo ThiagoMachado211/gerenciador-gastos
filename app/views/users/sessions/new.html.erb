@@ -19,14 +19,6 @@
     <%= link_to "Criar conta", new_user_registration_path, class: "auth-tab" %>
   </div>
 
-  <% if flash[:alert].present? %>
-    <div class="auth-alert"><%= flash[:alert] %></div>
-  <% end %>
-
-  <% if flash[:notice].present? %>
-    <div class="auth-notice"><%= flash[:notice] %></div>
-  <% end %>
-
   <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "auth-form" }) do |f| %>
     <div class="auth-field">
       <%= f.label :email, "E-mail", class: "auth-label" %>
