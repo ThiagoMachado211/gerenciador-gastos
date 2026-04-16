@@ -1,29 +1,41 @@
 <div class="auth-card">
-  <div class="auth-brand">
-    <div class="auth-brand__icon">
-      ↗
-    </div>
+  <div class="auth-logo-mark">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M7 17L17 7" />
+      <path d="M10 7h7v7" />
+    </svg>
+  </div>
 
-    <div class="auth-brand__text">
-      <h1><span>flu</span>xo</h1>
-      <p>Controle financeiro com clareza e precisão.</p>
-    </div>
+  <div class="auth-brand">
+    flux<em>o</em>
+  </div>
+
+  <div class="auth-tagline">
+    Controle financeiro com clareza e precisão.
   </div>
 
   <div class="auth-tabs">
-    <%= link_to "Entrar", new_user_session_path, class: "auth-tab auth-tab--active" %>
+    <%= link_to "Entrar", new_user_session_path, class: "auth-tab active" %>
     <%= link_to "Criar conta", new_user_registration_path, class: "auth-tab" %>
   </div>
 
+  <% if flash[:alert].present? %>
+    <div class="auth-alert"><%= flash[:alert] %></div>
+  <% end %>
+
+  <% if flash[:notice].present? %>
+    <div class="auth-notice"><%= flash[:notice] %></div>
+  <% end %>
+
   <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "auth-form" }) do |f| %>
     <div class="auth-field">
-      <%= f.label :email, "E-mail" %>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "seu@email.com" %>
+      <%= f.label :email, "E-mail", class: "auth-label" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "seu@email.com", class: "auth-input" %>
     </div>
 
     <div class="auth-field">
-      <%= f.label :password, "Senha" %>
-      <%= f.password_field :password, autocomplete: "current-password", placeholder: "••••••••" %>
+      <%= f.label :password, "Senha", class: "auth-label" %>
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "••••••••", class: "auth-input" %>
     </div>
 
     <%= f.submit "Entrar", class: "auth-submit" %>
