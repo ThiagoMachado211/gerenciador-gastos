@@ -1,4 +1,344 @@
-<h1>Fluxo</h1>
-<%= link_to "Entrar", new_user_session_path %>
-<%= link_to "Criar conta", new_user_registration_path %>
-<%= link_to "Planos Pagos", public_pricing_path %>
+<div class="scene"></div>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+<div class="grain"></div>
+<div class="grid-overlay"></div>
+
+<div class="wrap">
+
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-mark">
+        <svg viewBox="0 0 24 24">
+          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+          <polyline points="16 7 22 7 22 13"/>
+        </svg>
+      </div>
+
+      <span class="nav-brand">
+        flu<em>x</em>o
+      </span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#features" class="nav-link">Funcionalidades</a>
+      <a href="#como-funciona" class="nav-link">Como funciona</a>
+      <a href="#precos" class="nav-link">Planos</a>
+    </div>
+
+    <div class="nav-ctas">
+      <%= link_to "Entrar",
+          new_user_session_path,
+          class: "btn-ghost" %>
+
+      <%= link_to "Começar grátis →",
+          new_user_registration_path,
+          class: "btn-cta" %>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-dot"></span>
+      Controle financeiro direto no navegador
+    </div>
+
+    <h1 class="hero-h1">
+      Controle seu dinheiro<br>
+      com <em>clareza</em><br>
+      e simplicidade
+    </h1>
+
+    <p class="hero-sub">
+      O Fluxo é uma plataforma financeira moderna que roda direto
+      no navegador — sem instalar aplicativos, sem ocupar memória
+      do celular e com acesso em qualquer dispositivo.
+    </p>
+
+    <div class="hero-actions">
+
+      <%= link_to new_user_registration_path,
+          class: "hero-cta" do %>
+
+        Criar conta grátis
+
+        <svg viewBox="0 0 24 24">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+
+      <% end %>
+
+      <a href="#features" class="hero-link">
+        Conhecer funcionalidades
+      </a>
+    </div>
+
+    <div class="hero-proof">
+      <div class="proof-avatars">
+        <div class="proof-av">M</div>
+        <div class="proof-av">A</div>
+        <div class="proof-av">R</div>
+        <div class="proof-av">L</div>
+      </div>
+
+      <div class="proof-text">
+        <span class="proof-stars">★★★★★</span>
+        <strong>Plataforma moderna</strong>
+        para gestão financeira pessoal
+      </div>
+    </div>
+
+    <!-- MOCKUP -->
+    <div class="mockup-wrap" style="margin-top:56px">
+      <div class="mockup-glow"></div>
+
+      <div class="mockup">
+
+        <div class="mc">
+          <div class="mc-dots">
+            <div class="mc-dot"></div>
+            <div class="mc-dot"></div>
+            <div class="mc-dot"></div>
+          </div>
+
+          <div class="mc-url">
+            fluxo.app/dashboard
+          </div>
+        </div>
+
+        <div class="app-inner">
+
+          <div>
+
+            <div class="app-cards">
+
+              <div class="app-card ac-bal">
+                <div class="ac-lbl">Saldo</div>
+                <div class="ac-val">R$ 4.283</div>
+                <div class="ac-sub">Este mês</div>
+              </div>
+
+              <div class="app-card ac-inc">
+                <div class="ac-lbl">Receitas</div>
+                <div class="ac-val">R$ 8.000</div>
+                <div class="ac-sub">Entradas</div>
+              </div>
+
+              <div class="app-card ac-exp">
+                <div class="ac-lbl">Despesas</div>
+                <div class="ac-val">R$ 3.717</div>
+                <div class="ac-sub">Saídas</div>
+              </div>
+
+            </div>
+
+            <div class="app-bbar">
+
+              <div class="app-bbar-h">
+                <span>Orçamento mensal</span>
+                <span>62%</span>
+              </div>
+
+              <div class="app-track">
+                <div class="app-fill"></div>
+              </div>
+
+            </div>
+
+            <div class="app-txs">
+
+              <div class="app-tx">
+                <div class="app-tx-ico"
+                     style="background:rgba(48,217,136,.12)">
+                  💼
+                </div>
+
+                <div class="app-tx-inf">
+                  <div class="app-tx-nm">Salário</div>
+                  <div class="app-tx-dt">5 mar</div>
+                </div>
+
+                <div class="app-tx-am p">
+                  + R$ 5.800
+                </div>
+              </div>
+
+              <div class="app-tx">
+                <div class="app-tx-ico"
+                     style="background:rgba(240,82,82,.12)">
+                  🏠
+                </div>
+
+                <div class="app-tx-inf">
+                  <div class="app-tx-nm">Aluguel</div>
+                  <div class="app-tx-dt">1 mar</div>
+                </div>
+
+                <div class="app-tx-am n">
+                  − R$ 1.800
+                </div>
+              </div>
+
+              <div class="app-tx">
+                <div class="app-tx-ico"
+                     style="background:rgba(240,82,82,.12)">
+                  🍔
+                </div>
+
+                <div class="app-tx-inf">
+                  <div class="app-tx-nm">Supermercado</div>
+                  <div class="app-tx-dt">8 mar</div>
+                </div>
+
+                <div class="app-tx-am n">
+                  − R$ 413
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- SIDEBAR -->
+          <div class="app-side">
+
+            <div class="app-side-card">
+
+              <div class="app-side-lbl">
+                Categorias
+              </div>
+
+              <div class="mini-bars">
+
+                <div class="mini-bar-row">
+                  Alimentação
+                </div>
+
+                <div class="mini-bar-track">
+                  <div class="mini-bar-fill"
+                       style="background:#30d988;width:72%">
+                  </div>
+                </div>
+
+                <div class="mini-bar-row">
+                  Moradia
+                </div>
+
+                <div class="mini-bar-track">
+                  <div class="mini-bar-fill"
+                       style="background:#f05252;width:58%">
+                  </div>
+                </div>
+
+                <div class="mini-bar-row">
+                  Transporte
+                </div>
+
+                <div class="mini-bar-track">
+                  <div class="mini-bar-fill"
+                       style="background:#f5b731;width:36%">
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+
+    <div class="reveal">
+
+      <div class="section-tag">
+        ✦ Funcionalidades
+      </div>
+
+      <h2 class="section-h">
+        Tudo que você precisa<br>
+        para controlar suas <em>finanças</em>
+      </h2>
+
+      <p class="section-sub">
+        Dashboard moderno, categorias, cartões,
+        despesas parceladas e visão completa da sua vida financeira.
+      </p>
+    </div>
+
+    <div class="feat-grid">
+
+      <div class="feat-card">
+        <div class="feat-h">
+          Dashboard financeiro
+        </div>
+
+        <p class="feat-p">
+          Veja saldo, receitas e despesas em tempo real.
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-h">
+          Controle de cartões
+        </div>
+
+        <p class="feat-p">
+          Gerencie cartões e acompanhe gastos parcelados.
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-h">
+          Categorias personalizadas
+        </div>
+
+        <p class="feat-p">
+          Organize receitas e despesas do seu jeito.
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-h">
+          Análise visual
+        </div>
+
+        <p class="feat-p">
+          Gráficos claros para entender para onde vai seu dinheiro.
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-h">
+          Acesso em qualquer dispositivo
+        </div>
+
+        <p class="feat-p">
+          Use no celular, tablet ou computador sem instalar apps.
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-h">
+          Plataforma rápida
+        </div>
+
+        <p class="feat-p">
+          Interface leve, moderna e otimizada para performance.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</div>
