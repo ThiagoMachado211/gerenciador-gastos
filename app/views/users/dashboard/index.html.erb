@@ -1,9 +1,21 @@
-<h1>Dashboard</h1>
+<h1>Visão geral</h1>
 
-<p>Bem-vindo, <%= current_user.name.presence || current_user.email %>.</p>
+<p>
+  Bem-vindo, <%= current_user.name.presence || current_user.email %>.
+</p>
 
-<nav>
-  <%= link_to "Análise", users_analytics_path %>
-  <%= link_to "Nova compra", new_users_transaction_path %>
-  <%= link_to "Sair", destroy_user_session_path, data: { turbo_method: :delete } %>
-</nav>
+<section>
+  <h2>Resumo do mês</h2>
+
+  <div>
+    <p>Saldo do mês: R$ 0,00</p>
+    <p>Receitas: R$ 0,00</p>
+    <p>Gastos: R$ 0,00</p>
+  </div>
+</section>
+
+<section>
+  <h2>Transações recentes</h2>
+
+  <p>Nenhuma transação cadastrada ainda.</p>
+</section>

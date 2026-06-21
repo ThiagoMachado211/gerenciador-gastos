@@ -1,0 +1,46 @@
+.internal-body {
+  min-height: 100vh;
+  margin: 0;
+  background: #080a0f;
+  color: #eef0f5;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.internal-header {
+  height: 64px;
+  padding: 0 32px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.internal-logo {
+  color: #eef0f5;
+  text-decoration: none;
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+}
+
+.internal-logo::first-letter {
+  color: #30d988;
+}
+
+.internal-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.internal-nav a {
+  color: #8a8d99;
+  text-decoration: none;
+  font-size: .9rem;
+}
+
+.internal-nav a:hover {
+  color: #30d988;
+}
+
+.internal-main {
+  padding: 32px;
+}

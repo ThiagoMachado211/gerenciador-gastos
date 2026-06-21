@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fluxo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "internal", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="internal-body">
+    <header class="internal-header">
+      <%= link_to "fluxo", users_dashboard_path, class: "internal-logo" %>
+
+      <nav class="internal-nav">
+        <%= link_to "Visão geral", users_dashboard_path %>
+        <%= link_to "Análise", users_analytics_path %>
+        <%= link_to "+ Nova compra", new_users_transaction_path %>
+        <%= link_to "Sair", destroy_user_session_path, data: { turbo_method: :delete } %>
+      </nav>
+    </header>
+
+    <main class="internal-main">
+      <%= yield %>
+    </main>
+  </body>
+</html>
