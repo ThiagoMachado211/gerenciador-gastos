@@ -3,9 +3,9 @@ class Users::TransactionsController < Users::BaseController
   end
 
   def new
-    @transaction = Transaction.new
   end
 
   def create
+    redirect_to users_dashboard_path, notice: "Transação criada."
   end
 end
