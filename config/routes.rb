@@ -12,12 +12,12 @@ Rails.application.routes.draw do
 
   namespace :users do
     get "dashboard", to: "dashboard#index"
+    get "analytics", to: "analytics#index"
 
+    resources :transactions
     resources :categories
     resources :credit_cards
-    resources :transactions
 
     resource :subscription, only: %i[show create destroy]
-    get "analytics", to: "analytics#index"
   end
 end

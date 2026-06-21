@@ -1,8 +1,4 @@
-module Users
-  class DashboardController < ApplicationController
-    before_action :authenticate_user!
-
-    def index
-    end
+class Users::DashboardController < Users::BaseController
+  def index
   end
 end

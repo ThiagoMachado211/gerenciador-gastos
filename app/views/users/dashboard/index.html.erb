@@ -1,2 +1,9 @@
-<h1>Users::Dashboard#index</h1>
-<p>Find me in app/views/users/dashboard/index.html.erb</p>
+<h1>Dashboard</h1>
+
+<p>Bem-vindo, <%= current_user.name.presence || current_user.email %>.</p>
+
+<nav>
+  <%= link_to "Análise", users_analytics_path %>
+  <%= link_to "Nova compra", new_users_transaction_path %>
+  <%= link_to "Sair", destroy_user_session_path, data: { turbo_method: :delete } %>
+</nav>
