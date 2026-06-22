@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  category: one
+  credit_card: one
+  amount_cents: 1
+  kind: MyString
+  description: MyString
+  occurred_on: 2026-06-22
+  installments_count: 1
+
+two:
+  user: two
+  category: two
+  credit_card: two
+  amount_cents: 1
+  kind: MyString
+  description: MyString
+  occurred_on: 2026-06-22
+  installments_count: 1
