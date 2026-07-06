@@ -1,0 +1,32 @@
+<%= form_with model: [:users, category] do |f| %>
+  <% if category.errors.any? %>
+    <div>
+      <p>Não foi possível salvar:</p>
+
+      <ul>
+        <% category.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :name, "Nome" %><br>
+    <%= f.text_field :name, placeholder: "Ex: Alimentação" %>
+  </div>
+
+  <div>
+    <%= f.label :icon, "Ícone" %><br>
+    <%= f.text_field :icon, placeholder: "Ex: 🍔" %>
+  </div>
+
+  <div>
+    <%= f.label :color, "Cor" %><br>
+    <%= f.text_field :color, placeholder: "Ex: #30d988" %>
+  </div>
+
+  <br>
+
+  <%= f.submit "Salvar categoria" %>
+<% end %>

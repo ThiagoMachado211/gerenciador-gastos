@@ -1,0 +1,36 @@
+<h1>Categorias</h1>
+
+<p>
+  Plano gratuito: até 4 categorias.
+</p>
+
+<p>
+  Você possui <%= @categories.count %> categoria(s).
+</p>
+
+<%= link_to "Nova categoria", new_users_category_path %>
+
+<hr>
+
+<% if @categories.any? %>
+  <% @categories.each do |category| %>
+    <div>
+      <strong><%= category.icon.presence || "🏷️" %> <%= category.name %></strong>
+
+      <% if category.color.present? %>
+        <span><%= category.color %></span>
+      <% end %>
+
+      <%= link_to "Editar", edit_users_category_path(category) %>
+
+      <%= link_to "Remover",
+          users_category_path(category),
+          data: {
+            turbo_method: :delete,
+            turbo_confirm: "Tem certeza?"
+          } %>
+    </div>
+  <% end %>
+<% else %>
+  <p>Nenhuma categoria cadastrada ainda.</p>
+<% end %>
