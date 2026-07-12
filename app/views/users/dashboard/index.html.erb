@@ -1,21 +1,38 @@
-<h1>Visão geral</h1>
+<%= render "shared/page_header",
+           eyebrow: "Visão geral",
+           title: "Olá, #{current_user.name.presence || current_user.email}",
+           description: "Acompanhe o resumo da sua vida financeira.",
+           action_text: "Nova transação",
+           action_path: new_users_transaction_path %>
 
-<p>
-  Bem-vindo, <%= current_user.name.presence || current_user.email %>.
-</p>
+<div class="metrics-grid">
+  <%= render "shared/metric_card",
+             label: "Saldo do mês",
+             value: "R$ 0,00",
+             subtitle: "Receitas menos gastos",
+             variant: "success" %>
 
-<section>
-  <h2>Resumo do mês</h2>
+  <%= render "shared/metric_card",
+             label: "Receitas",
+             value: "R$ 0,00",
+             subtitle: "Nenhuma entrada",
+             variant: "success" %>
 
-  <div>
-    <p>Saldo do mês: R$ 0,00</p>
-    <p>Receitas: R$ 0,00</p>
-    <p>Gastos: R$ 0,00</p>
-  </div>
-</section>
+  <%= render "shared/metric_card",
+             label: "Gastos",
+             value: "R$ 0,00",
+             subtitle: "Nenhuma saída",
+             variant: "danger" %>
+</div>
 
-<section>
-  <h2>Transações recentes</h2>
+<%= render "shared/panel",
+           title: "Transações recentes",
+           description: "Últimos lançamentos registrados." do %>
 
-  <p>Nenhuma transação cadastrada ainda.</p>
-</section>
+  <%= render "shared/empty_state",
+             icon: "💳",
+             title: "Nenhuma transação cadastrada",
+             description: "Registre uma receita ou despesa para começar a acompanhar suas finanças.",
+             action_text: "Criar primeira transação",
+             action_path: new_users_transaction_path %>
+<% end %>

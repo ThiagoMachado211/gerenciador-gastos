@@ -1,0 +1,27 @@
+<header class="page-header">
+  <div class="page-header__content">
+    <% if local_assigns[:eyebrow].present? %>
+      <span class="page-header__eyebrow">
+        <%= eyebrow %>
+      </span>
+    <% end %>
+
+    <h1 class="page-header__title">
+      <%= title %>
+    </h1>
+
+    <% if local_assigns[:description].present? %>
+      <p class="page-header__description">
+        <%= description %>
+      </p>
+    <% end %>
+  </div>
+
+  <% if local_assigns[:action_text].present? && local_assigns[:action_path].present? %>
+    <div class="page-header__actions">
+      <%= link_to action_text,
+                  action_path,
+                  class: "button button--primary" %>
+    </div>
+  <% end %>
+</header>

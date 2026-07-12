@@ -1,0 +1,15 @@
+<article class="metric-card metric-card--<%= local_assigns.fetch(:variant, "neutral") %>">
+  <span class="metric-card__label">
+    <%= label %>
+  </span>
+
+  <strong class="metric-card__value">
+    <%= value %>
+  </strong>
+
+  <% if local_assigns[:subtitle].present? %>
+    <span class="metric-card__subtitle">
+      <%= subtitle %>
+    </span>
+  <% end %>
+</article>

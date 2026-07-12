@@ -1,0 +1,13 @@
+<% if object.errors.any? %>
+  <div class="form-errors" role="alert">
+    <strong class="form-errors__title">
+      Não foi possível salvar.
+    </strong>
+
+    <ul class="form-errors__list">
+      <% object.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

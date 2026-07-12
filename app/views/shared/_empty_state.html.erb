@@ -1,0 +1,23 @@
+<div class="empty-state">
+  <% if local_assigns[:icon].present? %>
+    <div class="empty-state__icon">
+      <%= icon %>
+    </div>
+  <% end %>
+
+  <h2 class="empty-state__title">
+    <%= title %>
+  </h2>
+
+  <% if local_assigns[:description].present? %>
+    <p class="empty-state__description">
+      <%= description %>
+    </p>
+  <% end %>
+
+  <% if local_assigns[:action_text].present? && local_assigns[:action_path].present? %>
+    <%= link_to action_text,
+                action_path,
+                class: "button button--primary" %>
+  <% end %>
+</div>
