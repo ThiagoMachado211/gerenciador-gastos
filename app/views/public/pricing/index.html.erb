@@ -1,2 +1,29 @@
-<h1>Public::Pricing#index</h1>
-<p>Find me in app/views/public/pricing/index.html.erb</p>
+<h1>Planos pagos</h1>
+
+<p>Escolha o plano ideal para controlar suas finanças.</p>
+
+<section>
+  <h2>Grátis</h2>
+  <p>R$ 0/mês</p>
+
+  <ul>
+    <li>Até 4 categorias</li>
+    <li>Até 1 cartão de crédito</li>
+    <li>Dashboard financeiro básico</li>
+  </ul>
+
+  <%= link_to "Começar grátis", new_user_registration_path %>
+</section>
+
+<section>
+  <h2>Pago</h2>
+  <p>R$ 19/mês</p>
+
+  <ul>
+    <li>Categorias ilimitadas</li>
+    <li>Cartões ilimitados</li>
+    <li>Dashboard completo</li>
+  </ul>
+
+  <%= link_to "Criar conta", new_user_registration_path %>
+</section>

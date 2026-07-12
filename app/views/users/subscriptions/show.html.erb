@@ -1,2 +1,25 @@
-<h1>Users::Subscriptions#show</h1>
-<p>Find me in app/views/users/subscriptions/show.html.erb</p>
+<h1>Meu plano</h1>
+
+<p>Você está atualmente no plano gratuito.</p>
+
+<section>
+  <h2>Plano gratuito</h2>
+
+  <ul>
+    <li>Até 4 categorias</li>
+    <li>Até 1 cartão de crédito</li>
+    <li>Controle de receitas e despesas</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Plano pago</h2>
+
+  <ul>
+    <li>Categorias ilimitadas</li>
+    <li>Cartões ilimitados</li>
+    <li>Recursos avançados</li>
+  </ul>
+
+  <%= button_to "Fazer upgrade", users_subscription_path, method: :post %>
+</section>

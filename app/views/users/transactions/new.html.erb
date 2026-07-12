@@ -1,7 +1,33 @@
 <h1>Nova compra</h1>
 
-<p>Formulário de transação ficará aqui.</p>
+<p>Registre um gasto ou receita rapidamente.</p>
 
-<nav>
-  <%= link_to "Voltar ao dashboard", users_dashboard_path %>
-</nav>
+<%= form_with url: users_transactions_path do |f| %>
+  <div>
+    <%= f.label :kind, "Tipo" %><br>
+    <%= f.select :kind, [["Gasto", "expense"], ["Receita", "income"]] %>
+  </div>
+
+  <div>
+    <%= f.label :description, "Descrição" %><br>
+    <%= f.text_field :description, placeholder: "Ex: Supermercado" %>
+  </div>
+
+  <div>
+    <%= f.label :amount, "Valor" %><br>
+    <%= f.text_field :amount, placeholder: "0,00" %>
+  </div>
+
+  <div>
+    <%= f.label :occurred_on, "Data" %><br>
+    <%= f.date_field :occurred_on, value: Date.current %>
+  </div>
+
+  <br>
+
+  <%= f.submit "Salvar transação" %>
+<% end %>
+
+<br>
+
+<%= link_to "Voltar ao dashboard", users_dashboard_path %>

@@ -1,0 +1,31 @@
+<h1>Novo cartão</h1>
+
+<%= form_with url: users_credit_cards_path do |f| %>
+  <div>
+    <%= f.label :name, "Nome do cartão" %><br>
+    <%= f.text_field :name, placeholder: "Ex: Nubank" %>
+  </div>
+
+  <div>
+    <%= f.label :limit_cents, "Limite" %><br>
+    <%= f.text_field :limit_cents, placeholder: "Ex: 3000" %>
+  </div>
+
+  <div>
+    <%= f.label :closing_day, "Dia de fechamento" %><br>
+    <%= f.number_field :closing_day %>
+  </div>
+
+  <div>
+    <%= f.label :due_day, "Dia de vencimento" %><br>
+    <%= f.number_field :due_day %>
+  </div>
+
+  <br>
+
+  <%= f.submit "Salvar cartão" %>
+<% end %>
+
+<br>
+
+<%= link_to "Voltar", users_credit_cards_path %>
