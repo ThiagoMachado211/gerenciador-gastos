@@ -7,12 +7,39 @@
 
 <%= render "shared/panel",
            title: "Seus cartões",
-           description: "Plano gratuito: até 1 cartão cadastrado." do %>
+           description: "#{@credit_cards.count} de 1 cartão utilizado no plano gratuito." do %>
 
-  <%= render "shared/empty_state",
-             icon: "💳",
-             title: "Nenhum cartão cadastrado",
-             description: "Cadastre um cartão para registrar compras e acompanhar os gastos.",
-             action_text: "Cadastrar cartão",
-             action_path: new_users_credit_card_path %>
+  <% if @credit_cards.any? %>
+    <div class="resource-list">
+      <% @credit_cards.each do |credit_card| %>
+        <% actions = capture do %>
+          <%= link_to "Editar",
+                      edit_users_credit_card_path(credit_card),
+                      class: "button button--secondary button--small" %>
+
+          <%= link_to "Excluir",
+                      users_credit_card_path(credit_card),
+                      data: {
+                        turbo_method: :delete,
+                        turbo_confirm: "Tem certeza que deseja excluir este cartão?"
+                      },
+                      class: "button button--danger button--small" %>
+        <% end %>
+
+        <%= render "shared/resource_item",
+                   icon: "💳",
+                   title: credit_card.name,
+                   description: "Fecha dia #{credit_card.closing_day} · vence dia #{credit_card.due_day}",
+                   value: credit_card.formatted_limit,
+                   actions: actions %>
+      <% end %>
+    </div>
+  <% else %>
+    <%= render "shared/empty_state",
+               icon: "💳",
+               title: "Nenhum cartão cadastrado",
+               description: "Cadastre um cartão para registrar compras e acompanhar seus gastos.",
+               action_text: "Cadastrar cartão",
+               action_path: new_users_credit_card_path %>
+  <% end %>
 <% end %>

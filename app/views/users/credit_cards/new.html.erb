@@ -5,52 +5,7 @@
 
 <%= render "shared/panel",
            title: "Dados do cartão",
-           description: "Essas informações serão utilizadas para acompanhar faturas e compras." do %>
+           description: "Essas informações serão usadas no controle das compras e faturas." do %>
 
-  <%= form_with url: users_credit_cards_path do |f| %>
-    <div class="form-grid">
-      <div class="form-field form-field--full">
-        <%= f.label :name, "Nome do cartão", class: "form-label" %>
-        <%= f.text_field :name,
-                         placeholder: "Ex: Nubank",
-                         class: "form-input" %>
-      </div>
-
-      <div class="form-field form-field--full">
-        <%= f.label :limit_cents, "Limite do cartão", class: "form-label" %>
-        <%= f.number_field :limit_cents,
-                           min: 0,
-                           step: 1,
-                           placeholder: "Ex: 5000",
-                           class: "form-input" %>
-      </div>
-
-      <div class="form-field">
-        <%= f.label :closing_day, "Dia de fechamento", class: "form-label" %>
-        <%= f.number_field :closing_day,
-                           min: 1,
-                           max: 31,
-                           placeholder: "Ex: 5",
-                           class: "form-input" %>
-      </div>
-
-      <div class="form-field">
-        <%= f.label :due_day, "Dia de vencimento", class: "form-label" %>
-        <%= f.number_field :due_day,
-                           min: 1,
-                           max: 31,
-                           placeholder: "Ex: 12",
-                           class: "form-input" %>
-      </div>
-    </div>
-
-    <div class="form-actions">
-      <%= f.submit "Salvar cartão",
-                   class: "button button--primary" %>
-
-      <%= link_to "Cancelar",
-                  users_credit_cards_path,
-                  class: "button button--secondary" %>
-    </div>
-  <% end %>
+  <%= render "form", credit_card: @credit_card %>
 <% end %>
