@@ -1,0 +1,16 @@
+<% flash.each do |type, message| %>
+  <% css_class =
+    case type.to_sym
+    when :notice
+      "flash-message flash-message--success"
+    when :alert
+      "flash-message flash-message--error"
+    else
+      "flash-message"
+    end
+  %>
+
+  <div class="<%= css_class %>" role="alert">
+    <%= message %>
+  </div>
+<% end %>

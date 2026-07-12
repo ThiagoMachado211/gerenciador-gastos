@@ -1,0 +1,48 @@
+<header class="internal-header">
+  <div class="internal-header__brand">
+    <%= link_to users_dashboard_path, class: "internal-logo" do %>
+      flu<span>xo</span>
+    <% end %>
+
+    <span class="internal-user-name">
+      <%= current_user.name.presence || current_user.email %>
+    </span>
+  </div>
+
+  <nav class="internal-nav" aria-label="Navegação principal">
+    <%= link_to "Visão geral",
+                users_dashboard_path,
+                class: "internal-nav__link" %>
+
+    <%= link_to "Análise",
+                users_analytics_path,
+                class: "internal-nav__link" %>
+
+    <%= link_to "Transações",
+                users_transactions_path,
+                class: "internal-nav__link" %>
+
+    <%= link_to "Categorias",
+                users_categories_path,
+                class: "internal-nav__link" %>
+
+    <%= link_to "Cartões",
+                users_credit_cards_path,
+                class: "internal-nav__link" %>
+
+    <%= link_to "Plano",
+                users_subscription_path,
+                class: "internal-nav__link" %>
+  </nav>
+
+  <div class="internal-header__actions">
+    <%= link_to "+ Nova transação",
+                new_users_transaction_path,
+                class: "internal-primary-action" %>
+
+    <%= link_to "Sair",
+                destroy_user_session_path,
+                data: { turbo_method: :delete },
+                class: "internal-logout" %>
+  </div>
+</header>
