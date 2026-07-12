@@ -3,20 +3,47 @@ class Users::TransactionsController < Users::BaseController
   end
 
   def new
+    @transaction = current_user.transactions.new
+    load_form_options
   end
 
   def create
-    redirect_to users_dashboard_path, notice: "Transação criada."
+    @transaction = current_user.transactions.new(transaction_params)
+    load_form_options
+
+    if @transaction.save
+      redirect_to users_transactions_path,
+                  notice: "Transação cadastrada com sucesso."
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def edit
   end
 
   def update
-    redirect_to users_transactions_path, notice: "Transação atualizada."
   end
 
   def destroy
-    redirect_to users_transactions_path, notice: "Transação removida."
+  end
+
+  private
+
+  def load_form_options
+    @categories = current_user.categories.order(:name)
+    @credit_cards = current_user.credit_cards.order(:name)
+  end
+
+  def transaction_params
+    params.require(:transaction).permit(
+      :kind,
+      :description,
+      :amount_cents,
+      :occurred_on,
+      :installments_count,
+      :category_id,
+      :credit_card_id
+    )
   end
 end
