@@ -8,31 +8,78 @@
 <div class="metrics-grid">
   <%= render "shared/metric_card",
              label: "Receitas",
-             value: "R$ 0,00",
-             subtitle: "Total do período",
+             value: number_to_currency(
+               @total_income_cents / 100.0,
+               unit: "R$ ",
+               separator: ",",
+               delimiter: "."
+             ),
+             subtitle: "Total registrado",
              variant: "success" %>
 
   <%= render "shared/metric_card",
              label: "Despesas",
-             value: "R$ 0,00",
-             subtitle: "Total do período",
+             value: number_to_currency(
+               @total_expense_cents / 100.0,
+               unit: "R$ ",
+               separator: ",",
+               delimiter: "."
+             ),
+             subtitle: "Total registrado",
              variant: "danger" %>
 
   <%= render "shared/metric_card",
              label: "Saldo",
-             value: "R$ 0,00",
+             value: number_to_currency(
+               @balance_cents / 100.0,
+               unit: "R$ ",
+               separator: ",",
+               delimiter: "."
+             ),
              subtitle: "Receitas menos despesas",
-             variant: "neutral" %>
+             variant: @balance_cents.negative? ? "danger" : "success" %>
 </div>
 
 <%= render "shared/panel",
            title: "Todas as transações",
-           description: "Movimentações registradas na sua conta." do %>
+           description: "#{@transactions.count} movimentação(ões) cadastrada(s)." do %>
 
-  <%= render "shared/empty_state",
-             icon: "↕️",
-             title: "Nenhuma transação cadastrada",
-             description: "Registre sua primeira receita ou despesa para começar.",
-             action_text: "Criar transação",
-             action_path: new_users_transaction_path %>
+  <% if @transactions.any? %>
+    <div class="resource-list">
+      <% @transactions.each do |transaction| %>
+        <% actions = capture do %>
+          <%= link_to "Editar",
+                      edit_users_transaction_path(transaction),
+                      class: "button button--secondary button--small" %>
+
+          <%= link_to "Excluir",
+                      users_transaction_path(transaction),
+                      data: {
+                        turbo_method: :delete,
+                        turbo_confirm: "Tem certeza que deseja excluir esta transação?"
+                      },
+                      class: "button button--danger button--small" %>
+        <% end %>
+
+        <% description_parts = [] %>
+        <% description_parts << transaction.category.name if transaction.category.present? %>
+        <% description_parts << transaction.credit_card.name if transaction.credit_card.present? %>
+        <% description_parts << transaction.occurred_on.strftime("%d/%m/%Y") %>
+
+        <%= render "shared/resource_item",
+                   icon: transaction.income? ? "↑" : "↓",
+                   title: transaction.description,
+                   description: description_parts.join(" · "),
+                   value: "#{transaction.income? ? '+' : '-'} #{transaction.formatted_amount}",
+                   actions: actions %>
+      <% end %>
+    </div>
+  <% else %>
+    <%= render "shared/empty_state",
+               icon: "↕️",
+               title: "Nenhuma transação cadastrada",
+               description: "Registre sua primeira receita ou despesa para começar.",
+               action_text: "Criar transação",
+               action_path: new_users_transaction_path %>
+  <% end %>
 <% end %>

@@ -969,3 +969,16 @@
   font-size: 0.74rem;
   line-height: 1.45;
 }
+
+
+.resource-item__value {
+  color: var(--internal-text);
+}
+
+.transaction-value--income {
+  color: var(--internal-accent);
+}
+
+.transaction-value--expense {
+  color: var(--internal-danger);
+}
