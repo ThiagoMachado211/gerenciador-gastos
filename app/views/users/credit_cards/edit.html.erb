@@ -1,0 +1,18 @@
+<%= render "shared/page_header",
+           eyebrow: "Cartões",
+           title: "Editar cartão",
+           description: "Atualize as informações do cartão." %>
+
+<%= render "shared/panel",
+           title: "Dados do cartão" do %>
+
+  <p class="placeholder-text">
+    O formulário de edição será conectado ao banco na fase de CRUDs.
+  </p>
+
+  <div class="form-actions">
+    <%= link_to "Voltar",
+                users_credit_cards_path,
+                class: "button button--secondary" %>
+  </div>
+<% end %>

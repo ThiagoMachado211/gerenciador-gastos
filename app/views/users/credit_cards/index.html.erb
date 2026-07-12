@@ -1,10 +1,18 @@
-<h1>Cartões</h1>
+<%= render "shared/page_header",
+           eyebrow: "Meios de pagamento",
+           title: "Cartões",
+           description: "Gerencie os cartões utilizados nas suas compras.",
+           action_text: "Novo cartão",
+           action_path: new_users_credit_card_path %>
 
-<p>Plano gratuito: até 1 cartão de crédito.</p>
+<%= render "shared/panel",
+           title: "Seus cartões",
+           description: "Plano gratuito: até 1 cartão cadastrado." do %>
 
-<%= link_to "Novo cartão", new_users_credit_card_path %>
-
-<section>
-  <h2>Em breve</h2>
-  <p>Aqui aparecerão os cartões cadastrados.</p>
-</section>
+  <%= render "shared/empty_state",
+             icon: "💳",
+             title: "Nenhum cartão cadastrado",
+             description: "Cadastre um cartão para registrar compras e acompanhar os gastos.",
+             action_text: "Cadastrar cartão",
+             action_path: new_users_credit_card_path %>
+<% end %>

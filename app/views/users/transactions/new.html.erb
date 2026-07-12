@@ -1,33 +1,78 @@
-<h1>Nova compra</h1>
+<%= render "shared/page_header",
+           eyebrow: "Transações",
+           title: "Nova transação",
+           description: "Registre uma receita ou despesa." %>
 
-<p>Registre um gasto ou receita rapidamente.</p>
+<%= render "shared/panel",
+           title: "Dados da transação",
+           description: "Informe os dados básicos da movimentação financeira." do %>
 
-<%= form_with url: users_transactions_path do |f| %>
-  <div>
-    <%= f.label :kind, "Tipo" %><br>
-    <%= f.select :kind, [["Gasto", "expense"], ["Receita", "income"]] %>
-  </div>
+  <%= form_with url: users_transactions_path do |f| %>
+    <div class="form-grid">
+      <div class="form-field">
+        <%= f.label :kind, "Tipo", class: "form-label" %>
+        <%= f.select :kind,
+                     [["Despesa", "expense"], ["Receita", "income"]],
+                     {},
+                     class: "form-select" %>
+      </div>
 
-  <div>
-    <%= f.label :description, "Descrição" %><br>
-    <%= f.text_field :description, placeholder: "Ex: Supermercado" %>
-  </div>
+      <div class="form-field">
+        <%= f.label :occurred_on, "Data", class: "form-label" %>
+        <%= f.date_field :occurred_on,
+                         value: Date.current,
+                         class: "form-input" %>
+      </div>
 
-  <div>
-    <%= f.label :amount, "Valor" %><br>
-    <%= f.text_field :amount, placeholder: "0,00" %>
-  </div>
+      <div class="form-field form-field--full">
+        <%= f.label :description, "Descrição", class: "form-label" %>
+        <%= f.text_field :description,
+                         placeholder: "Ex: Supermercado",
+                         class: "form-input" %>
+      </div>
 
-  <div>
-    <%= f.label :occurred_on, "Data" %><br>
-    <%= f.date_field :occurred_on, value: Date.current %>
-  </div>
+      <div class="form-field">
+        <%= f.label :amount_cents, "Valor", class: "form-label" %>
+        <%= f.number_field :amount_cents,
+                           min: 0,
+                           step: 1,
+                           placeholder: "Ex: 25000",
+                           class: "form-input" %>
+      </div>
 
-  <br>
+      <div class="form-field">
+        <%= f.label :installments_count, "Parcelas", class: "form-label" %>
+        <%= f.number_field :installments_count,
+                           min: 1,
+                           max: 36,
+                           value: 1,
+                           class: "form-input" %>
+      </div>
 
-  <%= f.submit "Salvar transação" %>
+      <div class="form-field">
+        <%= f.label :category_id, "Categoria", class: "form-label" %>
+        <%= f.select :category_id,
+                     [["Selecione uma categoria", ""]],
+                     {},
+                     class: "form-select" %>
+      </div>
+
+      <div class="form-field">
+        <%= f.label :credit_card_id, "Cartão", class: "form-label" %>
+        <%= f.select :credit_card_id,
+                     [["Nenhum cartão", ""]],
+                     {},
+                     class: "form-select" %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit "Salvar transação",
+                   class: "button button--primary" %>
+
+      <%= link_to "Cancelar",
+                  users_transactions_path,
+                  class: "button button--secondary" %>
+    </div>
+  <% end %>
 <% end %>
-
-<br>
-
-<%= link_to "Voltar ao dashboard", users_dashboard_path %>

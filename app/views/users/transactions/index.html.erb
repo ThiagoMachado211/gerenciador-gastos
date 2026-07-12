@@ -1,10 +1,38 @@
-<h1>Transações</h1>
+<%= render "shared/page_header",
+           eyebrow: "Movimentações",
+           title: "Transações",
+           description: "Acompanhe receitas, despesas e compras registradas.",
+           action_text: "Nova transação",
+           action_path: new_users_transaction_path %>
 
-<p>Lista de receitas e despesas cadastradas.</p>
+<div class="metrics-grid">
+  <%= render "shared/metric_card",
+             label: "Receitas",
+             value: "R$ 0,00",
+             subtitle: "Total do período",
+             variant: "success" %>
 
-<%= link_to "Nova transação", new_users_transaction_path %>
+  <%= render "shared/metric_card",
+             label: "Despesas",
+             value: "R$ 0,00",
+             subtitle: "Total do período",
+             variant: "danger" %>
 
-<section>
-  <h2>Em breve</h2>
-  <p>Aqui aparecerão todas as transações do usuário.</p>
-</section>
+  <%= render "shared/metric_card",
+             label: "Saldo",
+             value: "R$ 0,00",
+             subtitle: "Receitas menos despesas",
+             variant: "neutral" %>
+</div>
+
+<%= render "shared/panel",
+           title: "Todas as transações",
+           description: "Movimentações registradas na sua conta." do %>
+
+  <%= render "shared/empty_state",
+             icon: "↕️",
+             title: "Nenhuma transação cadastrada",
+             description: "Registre sua primeira receita ou despesa para começar.",
+             action_text: "Criar transação",
+             action_path: new_users_transaction_path %>
+<% end %>
