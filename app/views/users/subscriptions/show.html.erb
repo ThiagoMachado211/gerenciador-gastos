@@ -1,25 +1,113 @@
-<h1>Meu plano</h1>
+<%= render "shared/page_header",
+           eyebrow: "Conta",
+           title: "Meu plano",
+           description: "Consulte seu plano atual e os limites disponíveis." %>
 
-<p>Você está atualmente no plano gratuito.</p>
+<div class="subscription-grid">
+  <section class="subscription-card subscription-card--current">
+    <div class="subscription-card__top">
+      <div>
+        <%= render "shared/badge",
+                   text: "Plano atual",
+                   variant: "success" %>
 
-<section>
-  <h2>Plano gratuito</h2>
+        <h2 class="subscription-card__title">
+          Gratuito
+        </h2>
 
-  <ul>
-    <li>Até 4 categorias</li>
-    <li>Até 1 cartão de crédito</li>
-    <li>Controle de receitas e despesas</li>
-  </ul>
-</section>
+        <p class="subscription-card__price">
+          R$ 0
+          <span>/mês</span>
+        </p>
+      </div>
+    </div>
 
-<section>
-  <h2>Plano pago</h2>
+    <p class="subscription-card__description">
+      Recursos essenciais para iniciar o controle das suas finanças.
+    </p>
 
-  <ul>
-    <li>Categorias ilimitadas</li>
-    <li>Cartões ilimitados</li>
-    <li>Recursos avançados</li>
-  </ul>
+    <ul class="subscription-features">
+      <li>Até 4 categorias</li>
+      <li>Até 1 cartão de crédito</li>
+      <li>Registro de receitas e despesas</li>
+      <li>Dashboard financeiro</li>
+    </ul>
 
-  <%= button_to "Fazer upgrade", users_subscription_path, method: :post %>
-</section>
+    <div class="subscription-usage">
+      <div class="subscription-usage__item">
+        <div class="subscription-usage__header">
+          <span>Categorias utilizadas</span>
+          <strong><%= current_user.categories.count %> de 4</strong>
+        </div>
+
+        <% category_percentage = [(current_user.categories.count / 4.0) * 100, 100].min %>
+
+        <div class="usage-track">
+          <div class="usage-track__fill"
+               style="width: <%= category_percentage %>%">
+          </div>
+        </div>
+      </div>
+
+      <div class="subscription-usage__item">
+        <div class="subscription-usage__header">
+          <span>Cartões utilizados</span>
+          <strong><%= current_user.credit_cards.count %> de 1</strong>
+        </div>
+
+        <% card_percentage = [current_user.credit_cards.count * 100, 100].min %>
+
+        <div class="usage-track">
+          <div class="usage-track__fill"
+               style="width: <%= card_percentage %>%">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="subscription-card subscription-card--featured">
+    <div class="subscription-card__top">
+      <div>
+        <%= render "shared/badge",
+                   text: "Recomendado",
+                   variant: "success" %>
+
+        <h2 class="subscription-card__title">
+          Fluxo Pro
+        </h2>
+
+        <p class="subscription-card__price">
+          R$ 19
+          <span>/mês</span>
+        </p>
+      </div>
+    </div>
+
+    <p class="subscription-card__description">
+      Mais liberdade para organizar sua vida financeira sem limites.
+    </p>
+
+    <ul class="subscription-features">
+      <li>Categorias ilimitadas</li>
+      <li>Cartões ilimitados</li>
+      <li>Relatórios avançados</li>
+      <li>Exportação de dados</li>
+      <li>Recursos futuros do plano Pro</li>
+    </ul>
+
+    <%= button_to "Fazer upgrade",
+                  users_subscription_path,
+                  method: :post,
+                  class: "button button--primary subscription-card__button" %>
+  </section>
+</div>
+
+<%= render "shared/panel",
+           title: "Dúvidas sobre os planos?",
+           description: "Consulte a comparação pública entre os planos disponíveis." do %>
+
+  <%= link_to "Ver todos os planos",
+              public_pricing_path,
+              class: "button button--secondary" %>
+<% end %>

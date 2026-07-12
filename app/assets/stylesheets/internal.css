@@ -728,3 +728,237 @@
   font-size: 0.88rem;
   line-height: 1.6;
 }
+
+
+
+/* =========================================================
+   ANALYTICS
+========================================================= */
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.chart-placeholder {
+  min-height: 320px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px dashed var(--internal-border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  text-align: center;
+}
+
+.chart-placeholder--compact {
+  min-height: 320px;
+}
+
+.chart-placeholder__icon {
+  margin-bottom: 12px;
+  font-size: 2.3rem;
+}
+
+.chart-placeholder__title {
+  color: var(--internal-text);
+  font-size: 0.95rem;
+}
+
+.chart-placeholder__description {
+  max-width: 360px;
+  margin: 8px 0 0;
+  color: var(--internal-muted);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   TABLES
+========================================================= */
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+}
+
+.data-table th,
+.data-table td {
+  padding: 13px 14px;
+  border-bottom: 1px solid var(--internal-border);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.data-table th {
+  color: var(--internal-muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.data-table__success {
+  color: var(--internal-accent);
+}
+
+.data-table__danger {
+  color: var(--internal-danger);
+}
+
+/* =========================================================
+   SUBSCRIPTION
+========================================================= */
+
+.subscription-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.subscription-card {
+  padding: 28px;
+  border: 1px solid var(--internal-border);
+  border-radius: 18px;
+  background: var(--internal-surface);
+}
+
+.subscription-card--featured {
+  border-color: rgba(48, 217, 136, 0.28);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(48, 217, 136, 0.07),
+      var(--internal-surface) 55%
+    );
+}
+
+.subscription-card__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.subscription-card__title {
+  margin: 16px 0 0;
+  color: var(--internal-text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.8rem;
+}
+
+.subscription-card__price {
+  margin: 8px 0 0;
+  color: var(--internal-text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.subscription-card__price span {
+  color: var(--internal-muted);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+}
+
+.subscription-card__description {
+  margin: 18px 0 0;
+  color: var(--internal-muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.subscription-features {
+  margin: 24px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.subscription-features li {
+  position: relative;
+  padding-left: 23px;
+  color: var(--internal-text);
+  font-size: 0.84rem;
+}
+
+.subscription-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--internal-accent);
+  font-weight: 800;
+}
+
+.subscription-usage {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.subscription-usage__header {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--internal-muted);
+  font-size: 0.76rem;
+}
+
+.subscription-usage__header strong {
+  color: var(--internal-text);
+}
+
+.usage-track {
+  height: 7px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.usage-track__fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    var(--internal-accent),
+    var(--internal-accent-dark)
+  );
+}
+
+.subscription-card__button {
+  width: 100%;
+  margin-top: 28px;
+}
+
+/* =========================================================
+   RESPONSIVE ANALYTICS AND SUBSCRIPTION
+========================================================= */
+
+@media (max-width: 900px) {
+  .analytics-grid,
+  .subscription-grid {
+    grid-template-columns: 1fr;
+  }
+}

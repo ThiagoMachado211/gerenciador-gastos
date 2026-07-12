@@ -1,11 +1,99 @@
-<h1>Análise anual</h1>
+<%= render "shared/page_header",
+           eyebrow: "Análise",
+           title: "Análise financeira",
+           description: "Visualize o comportamento das suas receitas e despesas ao longo do tempo." %>
 
-<p>Visão completa das suas finanças ao longo do ano.</p>
+<div class="metrics-grid">
+  <%= render "shared/metric_card",
+             label: "Receitas no ano",
+             value: "R$ 0,00",
+             subtitle: "Total acumulado",
+             variant: "success" %>
 
-<section>
-  <h2>Resumo anual</h2>
+  <%= render "shared/metric_card",
+             label: "Despesas no ano",
+             value: "R$ 0,00",
+             subtitle: "Total acumulado",
+             variant: "danger" %>
 
-  <p>Total de receitas: R$ 0,00</p>
-  <p>Total de gastos: R$ 0,00</p>
-  <p>Saldo anual: R$ 0,00</p>
-</section>
+  <%= render "shared/metric_card",
+             label: "Saldo anual",
+             value: "R$ 0,00",
+             subtitle: "Receitas menos despesas",
+             variant: "neutral" %>
+</div>
+
+<div class="analytics-grid">
+  <%= render "shared/panel",
+             title: "Receitas e despesas por mês",
+             description: "Comparativo mensal do ano selecionado.",
+             class_name: "analytics-panel analytics-panel--wide" do %>
+
+    <div class="chart-placeholder">
+      <div class="chart-placeholder__icon">📊</div>
+      <strong class="chart-placeholder__title">
+        Gráfico mensal
+      </strong>
+      <p class="chart-placeholder__description">
+        O gráfico será conectado aos dados reais na fase de Analytics.
+      </p>
+    </div>
+  <% end %>
+
+  <%= render "shared/panel",
+             title: "Gastos por categoria",
+             description: "Distribuição percentual das despesas." do %>
+
+    <div class="chart-placeholder chart-placeholder--compact">
+      <div class="chart-placeholder__icon">🍩</div>
+      <strong class="chart-placeholder__title">
+        Gráfico por categoria
+      </strong>
+      <p class="chart-placeholder__description">
+        Ainda não existem despesas para analisar.
+      </p>
+    </div>
+  <% end %>
+</div>
+
+<%= render "shared/panel",
+           title: "Resumo mensal",
+           description: "Detalhamento financeiro de cada mês." do %>
+
+  <div class="table-responsive">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Mês</th>
+          <th>Receitas</th>
+          <th>Despesas</th>
+          <th>Saldo</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% [
+          "Janeiro",
+          "Fevereiro",
+          "Março",
+          "Abril",
+          "Maio",
+          "Junho",
+          "Julho",
+          "Agosto",
+          "Setembro",
+          "Outubro",
+          "Novembro",
+          "Dezembro"
+        ].each do |month| %>
+          <tr>
+            <td><%= month %></td>
+            <td class="data-table__success">R$ 0,00</td>
+            <td class="data-table__danger">R$ 0,00</td>
+            <td>R$ 0,00</td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>
