@@ -586,3 +586,137 @@
     flex-direction: column;
   }
 }
+
+
+/* =========================================================
+   RESOURCE LIST
+========================================================= */
+
+.resource-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resource-item {
+  min-height: 74px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border: 1px solid var(--internal-border);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.resource-item__main {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.resource-item__icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--internal-border);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 1.1rem;
+}
+
+.resource-item__content {
+  min-width: 0;
+}
+
+.resource-item__title {
+  margin: 0;
+  color: var(--internal-text);
+  font-size: 0.9rem;
+}
+
+.resource-item__description {
+  margin: 4px 0 0;
+  color: var(--internal-muted);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.resource-item__value {
+  flex-shrink: 0;
+  color: var(--internal-text);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.resource-item__actions {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 25px;
+  padding: 3px 9px;
+  border: 1px solid var(--internal-border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--internal-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.badge--success {
+  border-color: rgba(48, 217, 136, 0.25);
+  background: rgba(48, 217, 136, 0.08);
+  color: var(--internal-accent);
+}
+
+.badge--danger {
+  border-color: rgba(240, 82, 82, 0.25);
+  background: rgba(240, 82, 82, 0.08);
+  color: #ff9c9c;
+}
+
+.badge--warning {
+  border-color: rgba(245, 183, 49, 0.25);
+  background: rgba(245, 183, 49, 0.08);
+  color: #f5b731;
+}
+
+/* =========================================================
+   RESPONSIVE RESOURCE LIST
+========================================================= */
+
+@media (max-width: 680px) {
+  .resource-item {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .resource-item__main {
+    width: 100%;
+  }
+
+  .resource-item__value {
+    margin-left: 54px;
+  }
+
+  .resource-item__actions {
+    width: 100%;
+    margin-left: 54px;
+    flex-wrap: wrap;
+  }
+}

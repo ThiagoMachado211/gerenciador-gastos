@@ -1,5 +1,8 @@
-<h1>Editar categoria</h1>
+<%= render "shared/page_header",
+           eyebrow: "Categorias",
+           title: "Editar categoria",
+           description: "Atualize o nome, ícone ou cor da categoria." %>
 
-<%= render "form", category: @category %>
-
-<%= link_to "Voltar", users_categories_path %>
+<%= render "shared/panel" do %>
+  <%= render "form", category: @category %>
+<% end %>

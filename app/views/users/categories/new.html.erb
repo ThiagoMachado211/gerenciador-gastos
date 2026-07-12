@@ -1,5 +1,8 @@
-<h1>Nova categoria</h1>
+<%= render "shared/page_header",
+           eyebrow: "Categorias",
+           title: "Nova categoria",
+           description: "Crie uma categoria para organizar suas transações." %>
 
-<%= render "form", category: @category %>
-
-<%= link_to "Voltar", users_categories_path %>
+<%= render "shared/panel" do %>
+  <%= render "form", category: @category %>
+<% end %>

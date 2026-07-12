@@ -1,36 +1,44 @@
-<h1>Categorias</h1>
+<%= render "shared/page_header",
+           eyebrow: "Organização",
+           title: "Categorias",
+           description: "Organize suas receitas e despesas em grupos personalizados.",
+           action_text: "Nova categoria",
+           action_path: new_users_category_path %>
 
-<p>
-  Plano gratuito: até 4 categorias.
-</p>
+<%= render "shared/panel",
+           title: "Suas categorias",
+           description: "#{@categories.count} de 4 categorias utilizadas no plano gratuito." do %>
 
-<p>
-  Você possui <%= @categories.count %> categoria(s).
-</p>
+  <% if @categories.any? %>
+    <div class="resource-list">
+      <% @categories.each do |category| %>
+        <% actions = capture do %>
+          <%= link_to "Editar",
+                      edit_users_category_path(category),
+                      class: "button button--secondary button--small" %>
 
-<%= link_to "Nova categoria", new_users_category_path %>
+          <%= link_to "Excluir",
+                      users_category_path(category),
+                      data: {
+                        turbo_method: :delete,
+                        turbo_confirm: "Tem certeza que deseja excluir esta categoria?"
+                      },
+                      class: "button button--danger button--small" %>
+        <% end %>
 
-<hr>
-
-<% if @categories.any? %>
-  <% @categories.each do |category| %>
-    <div>
-      <strong><%= category.icon.presence || "🏷️" %> <%= category.name %></strong>
-
-      <% if category.color.present? %>
-        <span><%= category.color %></span>
+        <%= render "shared/resource_item",
+                   icon: category.icon.presence || "🏷️",
+                   title: category.name,
+                   description: category.color.present? ? "Cor: #{category.color}" : "Sem cor definida",
+                   actions: actions %>
       <% end %>
-
-      <%= link_to "Editar", edit_users_category_path(category) %>
-
-      <%= link_to "Remover",
-          users_category_path(category),
-          data: {
-            turbo_method: :delete,
-            turbo_confirm: "Tem certeza?"
-          } %>
     </div>
+  <% else %>
+    <%= render "shared/empty_state",
+               icon: "🏷️",
+               title: "Nenhuma categoria cadastrada",
+               description: "Crie sua primeira categoria para começar a organizar as transações.",
+               action_text: "Criar categoria",
+               action_path: new_users_category_path %>
   <% end %>
-<% else %>
-  <p>Nenhuma categoria cadastrada ainda.</p>
 <% end %>

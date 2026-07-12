@@ -1,0 +1,33 @@
+<article class="resource-item">
+  <div class="resource-item__main">
+    <% if local_assigns[:icon].present? %>
+      <div class="resource-item__icon">
+        <%= icon %>
+      </div>
+    <% end %>
+
+    <div class="resource-item__content">
+      <h3 class="resource-item__title">
+        <%= title %>
+      </h3>
+
+      <% if local_assigns[:description].present? %>
+        <p class="resource-item__description">
+          <%= description %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+
+  <% if local_assigns[:value].present? %>
+    <div class="resource-item__value">
+      <%= value %>
+    </div>
+  <% end %>
+
+  <% if local_assigns[:actions].present? %>
+    <div class="resource-item__actions">
+      <%= actions %>
+    </div>
+  <% end %>
+</article>

@@ -1,32 +1,35 @@
 <%= form_with model: [:users, category] do |f| %>
-  <% if category.errors.any? %>
-    <div>
-      <p>Não foi possível salvar:</p>
+  <%= render "shared/form_errors", object: category %>
 
-      <ul>
-        <% category.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+  <div class="form-grid">
+    <div class="form-field form-field--full">
+      <%= f.label :name, "Nome", class: "form-label" %>
+      <%= f.text_field :name,
+                       placeholder: "Ex: Alimentação",
+                       class: "form-input" %>
     </div>
-  <% end %>
 
-  <div>
-    <%= f.label :name, "Nome" %><br>
-    <%= f.text_field :name, placeholder: "Ex: Alimentação" %>
+    <div class="form-field">
+      <%= f.label :icon, "Ícone", class: "form-label" %>
+      <%= f.text_field :icon,
+                       placeholder: "Ex: 🍔",
+                       class: "form-input" %>
+    </div>
+
+    <div class="form-field">
+      <%= f.label :color, "Cor", class: "form-label" %>
+      <%= f.text_field :color,
+                       placeholder: "Ex: #30d988",
+                       class: "form-input" %>
+    </div>
   </div>
 
-  <div>
-    <%= f.label :icon, "Ícone" %><br>
-    <%= f.text_field :icon, placeholder: "Ex: 🍔" %>
+  <div class="form-actions">
+    <%= f.submit "Salvar categoria",
+                 class: "button button--primary" %>
+
+    <%= link_to "Cancelar",
+                users_categories_path,
+                class: "button button--secondary" %>
   </div>
-
-  <div>
-    <%= f.label :color, "Cor" %><br>
-    <%= f.text_field :color, placeholder: "Ex: #30d988" %>
-  </div>
-
-  <br>
-
-  <%= f.submit "Salvar categoria" %>
 <% end %>
