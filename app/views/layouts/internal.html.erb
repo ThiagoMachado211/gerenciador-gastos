@@ -26,5 +26,11 @@
         </div>
       </main>
     </div>
+
+    <% if ENV["APP_ENV_LABEL"].present? %>
+      <div class="environment-badge">
+        <%= ENV["APP_ENV_LABEL"] %>
+      </div>
+    <% end %>
   </body>
 </html>

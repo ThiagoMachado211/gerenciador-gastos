@@ -96,10 +96,15 @@
       <li>Recursos futuros do plano Pro</li>
     </ul>
 
-    <%= button_to "Fazer upgrade",
-                  users_subscription_path,
-                  method: :post,
-                  class: "button button--primary subscription-card__button" %>
+    <button class="button button--primary subscription-card__button"
+            disabled>
+      Upgrade em breve
+    </button>
+
+    <p class="subscription-coming-soon">
+      O plano Pro está sendo preparado e ainda não está disponível nesta versão de testes.
+    </p>
+
   </section>
 </div>
 

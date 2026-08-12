@@ -982,3 +982,46 @@
 .transaction-value--expense {
   color: var(--internal-danger);
 }
+
+
+.environment-badge {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1000;
+
+  padding: 7px 12px;
+
+  border: 1px solid rgba(245, 183, 49, 0.35);
+  border-radius: 999px;
+
+  background: rgba(8, 10, 15, 0.92);
+
+  color: #f5b731;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.subscription-card__button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.subscription-coming-soon {
+  margin: 10px 0 0;
+  color: var(--internal-muted);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+
+.internal-version {
+  color: var(--internal-muted);
+  font-size: 0.68rem;
+}
