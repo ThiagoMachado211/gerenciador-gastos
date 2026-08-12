@@ -984,29 +984,6 @@
 }
 
 
-.environment-badge {
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  z-index: 1000;
-
-  padding: 7px 12px;
-
-  border: 1px solid rgba(245, 183, 49, 0.35);
-  border-radius: 999px;
-
-  background: rgba(8, 10, 15, 0.92);
-
-  color: #f5b731;
-
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-
 .subscription-card__button:disabled {
   opacity: 0.55;
   cursor: not-allowed;
@@ -1024,4 +1001,26 @@
 .internal-version {
   color: var(--internal-muted);
   font-size: 0.68rem;
+}
+
+
+.beta-badge {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1000;
+
+  padding: 7px 12px;
+
+  border: 1px solid rgba(49, 216, 137, 0.3);
+  border-radius: 999px;
+
+  background: rgba(8, 10, 15, 0.92);
+  color: #31d889;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
