@@ -5,34 +5,138 @@
            action_text: "Nova transação",
            action_path: new_users_transaction_path %>
 
+
+
 <div class="metrics-grid">
   <%= render "shared/metric_card",
              label: "Saldo do mês",
-             value: "R$ 0,00",
+             value: number_to_currency(
+               @balance_cents / 100.0,
+               unit: "R$ ",
+               separator: ",",
+               delimiter: "."
+             ),
              subtitle: "Receitas menos gastos",
-             variant: "success" %>
+             variant: @balance_cents.negative? ? "danger" : "success" %>
 
   <%= render "shared/metric_card",
              label: "Receitas",
-             value: "R$ 0,00",
-             subtitle: "Nenhuma entrada",
+             value: number_to_currency(
+               @income_cents / 100.0,
+               unit: "R$ ",
+               separator: ",",
+               delimiter: "."
+             ),
+             subtitle: "Entradas no mês",
              variant: "success" %>
 
   <%= render "shared/metric_card",
              label: "Gastos",
-             value: "R$ 0,00",
-             subtitle: "Nenhuma saída",
+             value: number_to_currency(
+               @expense_cents / 100.0,
+               unit: "R$ ",
+               separator: ",",
+               delimiter: "."
+             ),
+             subtitle: "Saídas no mês",
              variant: "danger" %>
 </div>
+
+
 
 <%= render "shared/panel",
            title: "Transações recentes",
            description: "Últimos lançamentos registrados." do %>
 
-  <%= render "shared/empty_state",
-             icon: "💳",
-             title: "Nenhuma transação cadastrada",
-             description: "Registre uma receita ou despesa para começar a acompanhar suas finanças.",
-             action_text: "Criar primeira transação",
-             action_path: new_users_transaction_path %>
+  <% if @recent_transactions.any? %>
+    <div class="resource-list">
+
+      <% @recent_transactions.each do |transaction| %>
+
+        <% description_parts = [] %>
+
+        <% if transaction.category.present? %>
+          <% description_parts << transaction.category.name %>
+        <% end %>
+
+        <% if transaction.credit_card.present? %>
+          <% description_parts << transaction.credit_card.name %>
+        <% end %>
+
+        <% description_parts << transaction.occurred_on.strftime("%d/%m/%Y") %>
+
+        <%= render "shared/resource_item",
+                   icon: transaction.income? ? "↑" : "↓",
+                   title: transaction.description,
+                   description: description_parts.join(" · "),
+                   value: "#{transaction.income? ? '+' : '-'} #{transaction.formatted_amount}" %>
+
+      <% end %>
+
+    </div>
+  <% else %>
+
+    <%= render "shared/empty_state",
+               icon: "💳",
+               title: "Nenhuma transação cadastrada",
+               description: "Registre uma receita ou despesa para começar a acompanhar suas finanças.",
+               action_text: "Criar primeira transação",
+               action_path: new_users_transaction_path %>
+
+  <% end %>
 <% end %>
+
+
+
+<div class="analytics-grid">
+
+  <%= render "shared/panel",
+             title: "Receitas e despesas por mês",
+             description: "Comparativo mensal de #{@reference_date.year}." do %>
+
+    <div class="chart-placeholder">
+      <strong class="chart-placeholder__title">
+        Gráfico mensal
+      </strong>
+
+      <p class="chart-placeholder__description">
+        Os dados mensais já estão disponíveis e serão usados no gráfico.
+      </p>
+    </div>
+
+  <% end %>
+
+  <%= render "shared/panel",
+             title: "Gastos por categoria",
+             description: "Distribuição das despesas." do %>
+
+    <% if @category_summary.any? %>
+
+      <div class="resource-list">
+        <% @category_summary.each do |category_name, amount_cents| %>
+
+          <%= render "shared/resource_item",
+                     icon: "🏷️",
+                     title: category_name,
+                     value: number_to_currency(
+                       amount_cents / 100.0,
+                       unit: "R$ ",
+                       separator: ",",
+                       delimiter: "."
+                     ) %>
+
+        <% end %>
+      </div>
+
+    <% else %>
+
+      <%= render "shared/empty_state",
+                 icon: "🍩",
+                 title: "Nenhuma despesa categorizada",
+                 description: "Os gastos por categoria aparecerão aqui." %>
+
+    <% end %>
+
+  <% end %>
+
+</div>
