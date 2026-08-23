@@ -1,13 +1,15 @@
 <%= render "shared/page_header",
            eyebrow: "Visão geral",
            title: "Olá, #{current_user.name.presence || current_user.email}",
-           description: "Acompanhe o resumo da sua vida financeira.",
+           description: "Acompanhe sua vida financeira em um único lugar.",
            action_text: "Nova transação",
            action_path: new_users_transaction_path %>
 
 
+<!-- RESUMO DO MÊS -->
 
 <div class="metrics-grid">
+
   <%= render "shared/metric_card",
              label: "Saldo do mês",
              value: number_to_currency(
@@ -18,6 +20,7 @@
              ),
              subtitle: "Receitas menos gastos",
              variant: @balance_cents.negative? ? "danger" : "success" %>
+
 
   <%= render "shared/metric_card",
              label: "Receitas",
@@ -30,6 +33,7 @@
              subtitle: "Entradas no mês",
              variant: "success" %>
 
+
   <%= render "shared/metric_card",
              label: "Gastos",
              value: number_to_currency(
@@ -40,79 +44,132 @@
              ),
              subtitle: "Saídas no mês",
              variant: "danger" %>
+
 </div>
 
 
+<!-- RESUMO ANUAL -->
 
 <%= render "shared/panel",
-           title: "Transações recentes",
-           description: "Últimos lançamentos registrados." do %>
+           title: "Resumo de #{@reference_date.year}",
+           description: "Resultado financeiro acumulado no ano." do %>
 
-  <% if @recent_transactions.any? %>
-    <div class="resource-list">
+  <div class="metrics-grid">
 
-      <% @recent_transactions.each do |transaction| %>
+    <%= render "shared/metric_card",
+               label: "Receitas no ano",
+               value: number_to_currency(
+                 @year_income_cents / 100.0,
+                 unit: "R$ ",
+                 separator: ",",
+                 delimiter: "."
+               ),
+               variant: "success" %>
 
-        <% description_parts = [] %>
+    <%= render "shared/metric_card",
+               label: "Gastos no ano",
+               value: number_to_currency(
+                 @year_expense_cents / 100.0,
+                 unit: "R$ ",
+                 separator: ",",
+                 delimiter: "."
+               ),
+               variant: "danger" %>
 
-        <% if transaction.category.present? %>
-          <% description_parts << transaction.category.name %>
-        <% end %>
+    <%= render "shared/metric_card",
+               label: "Saldo anual",
+               value: number_to_currency(
+                 @year_balance_cents / 100.0,
+                 unit: "R$ ",
+                 separator: ",",
+                 delimiter: "."
+               ),
+               variant: @year_balance_cents.negative? ? "danger" : "success" %>
 
-        <% if transaction.credit_card.present? %>
-          <% description_parts << transaction.credit_card.name %>
-        <% end %>
+  </div>
 
-        <% description_parts << transaction.occurred_on.strftime("%d/%m/%Y") %>
-
-        <%= render "shared/resource_item",
-                   icon: transaction.income? ? "↑" : "↓",
-                   title: transaction.description,
-                   description: description_parts.join(" · "),
-                   value: "#{transaction.income? ? '+' : '-'} #{transaction.formatted_amount}" %>
-
-      <% end %>
-
-    </div>
-  <% else %>
-
-    <%= render "shared/empty_state",
-               icon: "💳",
-               title: "Nenhuma transação cadastrada",
-               description: "Registre uma receita ou despesa para começar a acompanhar suas finanças.",
-               action_text: "Criar primeira transação",
-               action_path: new_users_transaction_path %>
-
-  <% end %>
 <% end %>
 
 
+<!-- ANÁLISES -->
 
 <div class="analytics-grid">
 
   <%= render "shared/panel",
              title: "Receitas e despesas por mês",
-             description: "Comparativo mensal de #{@reference_date.year}." do %>
+             description: "Movimentação financeira durante #{@reference_date.year}." do %>
 
-    <div class="chart-placeholder">
-      <strong class="chart-placeholder__title">
-        Gráfico mensal
-      </strong>
+    <div class="table-responsive">
 
-      <p class="chart-placeholder__description">
-        Os dados mensais já estão disponíveis e serão usados no gráfico.
-      </p>
+      <table class="data-table">
+
+        <thead>
+          <tr>
+            <th>Mês</th>
+            <th>Receitas</th>
+            <th>Despesas</th>
+            <th>Saldo</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <% @monthly_summary.each do |month| %>
+
+            <tr>
+
+              <td>
+                <%= month[:month_name].capitalize %>
+              </td>
+
+              <td class="data-table__success">
+                <%= number_to_currency(
+                      month[:income_cents] / 100.0,
+                      unit: "R$ ",
+                      separator: ",",
+                      delimiter: "."
+                    ) %>
+              </td>
+
+              <td class="data-table__danger">
+                <%= number_to_currency(
+                      month[:expense_cents] / 100.0,
+                      unit: "R$ ",
+                      separator: ",",
+                      delimiter: "."
+                    ) %>
+              </td>
+
+              <td>
+                <%= number_to_currency(
+                      month[:balance_cents] / 100.0,
+                      unit: "R$ ",
+                      separator: ",",
+                      delimiter: "."
+                    ) %>
+              </td>
+
+            </tr>
+
+          <% end %>
+
+        </tbody>
+
+      </table>
+
     </div>
 
   <% end %>
 
+
   <%= render "shared/panel",
              title: "Gastos por categoria",
-             description: "Distribuição das despesas." do %>
+             description: "Despesas acumuladas no ano." do %>
 
     <% if @category_summary.any? %>
 
       <div class="resource-list">
+
         <% @category_summary.each do |category_name, amount_cents| %>
 
           <%= render "shared/resource_item",
@@ -126,17 +183,62 @@
                      ) %>
 
         <% end %>
+
       </div>
 
     <% else %>
 
       <%= render "shared/empty_state",
-                 icon: "🍩",
+                 icon: "🏷️",
                  title: "Nenhuma despesa categorizada",
-                 description: "Os gastos por categoria aparecerão aqui." %>
+                 description: "As despesas por categoria aparecerão aqui." %>
 
     <% end %>
 
   <% end %>
 
 </div>
+
+
+<!-- TRANSAÇÕES RECENTES -->
+
+<%= render "shared/panel",
+           title: "Transações recentes",
+           description: "Últimos lançamentos registrados." do %>
+
+  <% if @recent_transactions.any? %>
+
+    <div class="resource-list">
+
+      <% @recent_transactions.each do |transaction| %>
+
+        <% details = [] %>
+
+        <% details << transaction.category.name if transaction.category.present? %>
+
+        <% details << transaction.credit_card.name if transaction.credit_card.present? %>
+
+        <% details << transaction.occurred_on.strftime("%d/%m/%Y") %>
+
+        <%= render "shared/resource_item",
+                   icon: transaction.income? ? "↑" : "↓",
+                   title: transaction.description,
+                   description: details.join(" · "),
+                   value: "#{transaction.income? ? '+' : '-'} #{transaction.formatted_amount}" %>
+
+      <% end %>
+
+    </div>
+
+  <% else %>
+
+    <%= render "shared/empty_state",
+               icon: "💳",
+               title: "Nenhuma transação cadastrada",
+               description: "Registre uma receita ou despesa para começar.",
+               action_text: "Criar primeira transação",
+               action_path: new_users_transaction_path %>
+
+  <% end %>
+
+<% end %>
