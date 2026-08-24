@@ -1024,3 +1024,17 @@
 
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
+
+
+.dashboard-chart {
+  position: relative;
+  width: 100%;
+}
+
+.dashboard-chart--monthly {
+  height: 340px;
+}
+
+.dashboard-chart--categories {
+  height: 340px;
+}

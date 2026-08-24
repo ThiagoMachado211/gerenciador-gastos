@@ -1,3 +1,20 @@
+<%
+  monthly_chart_data = @monthly_summary.map do |item|
+    {
+      month: item[:month_name].capitalize,
+      income: item[:income_cents] / 100.0,
+      expense: item[:expense_cents] / 100.0
+    }
+  end
+
+  category_chart_data = @category_summary.map do |name, amount_cents|
+    {
+      name: name,
+      value: amount_cents / 100.0
+    }
+  end
+%>
+
 <%= render "shared/page_header",
            eyebrow: "Visão geral",
            title: "Olá, #{current_user.name.presence || current_user.email}",
@@ -21,7 +38,6 @@
              subtitle: "Receitas menos gastos",
              variant: @balance_cents.negative? ? "danger" : "success" %>
 
-
   <%= render "shared/metric_card",
              label: "Receitas",
              value: number_to_currency(
@@ -32,7 +48,6 @@
              ),
              subtitle: "Entradas no mês",
              variant: "success" %>
-
 
   <%= render "shared/metric_card",
              label: "Gastos",
@@ -91,99 +106,38 @@
 <% end %>
 
 
-<!-- ANÁLISES -->
+<!-- GRÁFICOS -->
 
-<div class="analytics-grid">
+<div
+  class="analytics-grid"
+  data-controller="dashboard-charts"
+  data-dashboard-charts-monthly-value="<%= monthly_chart_data.to_json %>"
+  data-dashboard-charts-categories-value="<%= category_chart_data.to_json %>"
+>
+
+  <!-- RECEITAS X DESPESAS -->
 
   <%= render "shared/panel",
              title: "Receitas e despesas por mês",
              description: "Movimentação financeira durante #{@reference_date.year}." do %>
 
-    <div class="table-responsive">
-
-      <table class="data-table">
-
-        <thead>
-          <tr>
-            <th>Mês</th>
-            <th>Receitas</th>
-            <th>Despesas</th>
-            <th>Saldo</th>
-          </tr>
-        </thead>
-
-        <tbody>
-
-          <% @monthly_summary.each do |month| %>
-
-            <tr>
-
-              <td>
-                <%= month[:month_name].capitalize %>
-              </td>
-
-              <td class="data-table__success">
-                <%= number_to_currency(
-                      month[:income_cents] / 100.0,
-                      unit: "R$ ",
-                      separator: ",",
-                      delimiter: "."
-                    ) %>
-              </td>
-
-              <td class="data-table__danger">
-                <%= number_to_currency(
-                      month[:expense_cents] / 100.0,
-                      unit: "R$ ",
-                      separator: ",",
-                      delimiter: "."
-                    ) %>
-              </td>
-
-              <td>
-                <%= number_to_currency(
-                      month[:balance_cents] / 100.0,
-                      unit: "R$ ",
-                      separator: ",",
-                      delimiter: "."
-                    ) %>
-              </td>
-
-            </tr>
-
-          <% end %>
-
-        </tbody>
-
-      </table>
-
+    <div class="dashboard-chart dashboard-chart--monthly">
+      <canvas data-dashboard-charts-target="monthly"></canvas>
     </div>
 
   <% end %>
 
 
+  <!-- GASTOS POR CATEGORIA -->
+
   <%= render "shared/panel",
              title: "Gastos por categoria",
-             description: "Despesas acumuladas no ano." do %>
+             description: "Distribuição das despesas em #{@reference_date.year}." do %>
 
     <% if @category_summary.any? %>
 
-      <div class="resource-list">
-
-        <% @category_summary.each do |category_name, amount_cents| %>
-
-          <%= render "shared/resource_item",
-                     icon: "🏷️",
-                     title: category_name,
-                     value: number_to_currency(
-                       amount_cents / 100.0,
-                       unit: "R$ ",
-                       separator: ",",
-                       delimiter: "."
-                     ) %>
-
-        <% end %>
-
+      <div class="dashboard-chart dashboard-chart--categories">
+        <canvas data-dashboard-charts-target="categories"></canvas>
       </div>
 
     <% else %>
@@ -198,6 +152,75 @@
   <% end %>
 
 </div>
+
+
+<!-- RESUMO MENSAL -->
+
+<%= render "shared/panel",
+           title: "Resumo mensal",
+           description: "Detalhamento financeiro de #{@reference_date.year}." do %>
+
+  <div class="table-responsive">
+
+    <table class="data-table">
+
+      <thead>
+        <tr>
+          <th>Mês</th>
+          <th>Receitas</th>
+          <th>Despesas</th>
+          <th>Saldo</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <% @monthly_summary.each do |month| %>
+
+          <tr>
+
+            <td>
+              <%= month[:month_name].capitalize %>
+            </td>
+
+            <td class="data-table__success">
+              <%= number_to_currency(
+                    month[:income_cents] / 100.0,
+                    unit: "R$ ",
+                    separator: ",",
+                    delimiter: "."
+                  ) %>
+            </td>
+
+            <td class="data-table__danger">
+              <%= number_to_currency(
+                    month[:expense_cents] / 100.0,
+                    unit: "R$ ",
+                    separator: ",",
+                    delimiter: "."
+                  ) %>
+            </td>
+
+            <td>
+              <%= number_to_currency(
+                    month[:balance_cents] / 100.0,
+                    unit: "R$ ",
+                    separator: ",",
+                    delimiter: "."
+                  ) %>
+            </td>
+
+          </tr>
+
+        <% end %>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+<% end %>
 
 
 <!-- TRANSAÇÕES RECENTES -->
