@@ -1,0 +1,6 @@
+<footer class="landing-footer">
+  <div class="f-brand"><%= link_to "Fluxo", root_path, class: "nav-brand" %><p class="f-desc">Controle financeiro pessoal com clareza e simplicidade.</p></div>
+  <div><h2 class="f-col-title">Explore</h2><div class="f-links"><%= link_to "Funcionalidades", root_path(anchor: "features"), class: "f-link" %><%= link_to "Como funciona", root_path(anchor: "como-funciona"), class: "f-link" %><%= link_to "Planos", root_path(anchor: "precos"), class: "f-link" %></div></div>
+  <div><h2 class="f-col-title">Sua conta</h2><div class="f-links"><%= link_to "Entrar", new_user_session_path, class: "f-link" %><%= link_to "Criar conta", new_user_registration_path, class: "f-link" %><%= link_to "Recuperar senha", new_user_password_path, class: "f-link" %></div></div>
+  <p class="f-bottom">© <%= Date.current.year %> Fluxo · Versão beta</p>
+</footer>

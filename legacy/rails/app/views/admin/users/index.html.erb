@@ -1,0 +1,13 @@
+<%= render "shared/page_header", eyebrow: "Administração", title: "Usuários", description: "#{@users_count} contas cadastradas. Consulta de dados cadastrais.", action_text: "Visão da plataforma", action_path: admin_root_path %>
+<%= render "shared/panel", title: "Contas da plataforma" do %>
+  <%= render "admin/users_table", users: @users %>
+  <nav class="pagination" aria-label="Paginação de usuários">
+    <% if @page > 1 %>
+      <%= link_to "Anterior", admin_users_path(page: @page - 1), class: "button button--secondary" %>
+    <% end %>
+    <span>Página <%= @page %> de <%= @total_pages %></span>
+    <% if @page < @total_pages %>
+      <%= link_to "Próxima", admin_users_path(page: @page + 1), class: "button button--secondary" %>
+    <% end %>
+  </nav>
+<% end %>

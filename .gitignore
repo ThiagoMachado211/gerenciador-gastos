@@ -34,3 +34,15 @@
 /config/*.key
 .env
 .env.*
+!/.env.example
+
+# Local administrative credentials must never be committed.
+/.admin/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+/staticfiles/
+/legacy/rails/config/*.key
+/legacy/rails/config/credentials/*.key

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title><%= content_for(:title) || "Fluxo | Controle financeiro" %></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "theme", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "internal", "data-turbo-track": "reload" %>
+
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="internal-body">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <div class="internal-page">
+      <%= render "shared/internal_header" %>
+
+      <main class="internal-main" id="conteudo" tabindex="-1">
+        <%= render "shared/flash_messages" %>
+
+        <div class="internal-content">
+          <%= yield %>
+        </div>
+      </main>
+    </div>
+
+    <div class="beta-badge" aria-label="Versão do aplicativo">
+      Fluxo v<%= APP_VERSION %> · Beta interno
+    </div>
+  </body>
+</html>

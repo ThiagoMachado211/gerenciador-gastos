@@ -1,0 +1,36 @@
+<div class="auth-card">
+  <h1 class="sr-only">Entrar no Fluxo</h1>
+  <div class="auth-logo-mark">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M7 17L17 7" />
+      <path d="M10 7h7v7" />
+    </svg>
+  </div>
+
+  <%= render "shared/auth_brand" %>
+
+  <div class="auth-tabs" aria-label="Acesso à conta">
+    <%= link_to "Entrar", new_user_session_path, class: "auth-tab active", aria: { current: "page" } %>
+    <%= link_to "Criar conta", new_user_registration_path, class: "auth-tab" %>
+  </div>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "auth-form" }) do |f| %>
+    <div class="auth-field">
+      <%= f.label :email, "E-mail", class: "auth-label" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", required: true, placeholder: "seu@email.com", class: "auth-input" %>
+    </div>
+
+    <div class="auth-field">
+      <%= f.label :password, "Senha", class: "auth-label" %>
+      <%= f.password_field :password, autocomplete: "current-password", required: true, placeholder: "••••••••", class: "auth-input" %>
+    </div>
+
+    <%= f.submit "Entrar", class: "auth-submit" %>
+    <%= link_to "Esqueci minha senha", new_user_password_path, class: "auth-link-subtle" %>
+  <% end %>
+
+  <p class="auth-footer-link">
+    Não tem conta?
+    <%= link_to "Cadastre-se", new_user_registration_path %>
+  </p>
+</div>

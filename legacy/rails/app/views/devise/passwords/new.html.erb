@@ -1,0 +1,14 @@
+<div class="auth-card">
+  <%= render "shared/auth_brand" %>
+  <h1 class="auth-title">Recuperar senha</h1>
+  <p class="auth-help">Informe seu e-mail para receber as instruções de recuperação.</p>
+  <%= render "shared/form_errors", object: resource %>
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: "auth-form" }) do |f| %>
+    <div class="auth-field">
+      <%= f.label :email, "E-mail", class: "auth-label" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", required: true, class: "auth-input" %>
+    </div>
+    <%= f.submit "Enviar instruções", class: "auth-submit" %>
+  <% end %>
+  <p class="auth-footer-link"><%= link_to "Voltar para entrar", new_user_session_path %></p>
+</div>

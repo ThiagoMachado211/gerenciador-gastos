@@ -1,0 +1,23 @@
+<section class="section" id="precos" aria-labelledby="planos-titulo">
+  <span class="section-tag">Planos</span>
+  <h2 class="section-h" id="planos-titulo">Comece com <em>simplicidade</em></h2>
+  <p class="section-sub">O plano gratuito está disponível nesta fase beta. O plano Pro ainda está em preparação.</p>
+  <div class="pricing-grid">
+    <article class="plan featured">
+      <span class="plan-badge">Disponível</span>
+      <h3 class="plan-name">Gratuito</h3>
+      <p class="plan-price"><sup>R$</sup>0<span>/mês</span></p>
+      <p class="plan-per">Para começar a organizar suas finanças</p>
+      <ul class="plan-feat"><li>Até 4 categorias</li><li>Até 1 cartão de crédito</li><li>Registro de receitas e despesas</li><li>Dashboard com gráficos e resumo mensal</li></ul>
+      <%= link_to "Criar conta grátis", new_user_registration_path, class: "plan-cta em" %>
+    </article>
+    <article class="plan">
+      <span class="plan-badge">Em preparação</span>
+      <h3 class="plan-name">Fluxo Pro</h3>
+      <p class="plan-price">Em breve</p>
+      <p class="plan-per">Mais recursos para a sua organização</p>
+      <p class="plan-note">O plano pago ainda não está disponível. Nenhuma cobrança será realizada nesta versão.</p>
+      <button class="plan-cta" disabled>Indisponível no momento</button>
+    </article>
+  </div>
+</section>

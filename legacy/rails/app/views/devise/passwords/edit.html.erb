@@ -1,0 +1,18 @@
+<div class="auth-card">
+  <%= render "shared/auth_brand" %>
+  <h1 class="auth-title">Criar nova senha</h1>
+  <%= render "shared/form_errors", object: resource %>
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: "auth-form" }) do |f| %>
+    <%= f.hidden_field :reset_password_token %>
+    <div class="auth-field">
+      <%= f.label :password, "Nova senha", class: "auth-label" %>
+      <%= f.password_field :password, autofocus: true, autocomplete: "new-password", required: true, minlength: @minimum_password_length, class: "auth-input" %>
+    </div>
+    <div class="auth-field">
+      <%= f.label :password_confirmation, "Confirmar nova senha", class: "auth-label" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", required: true, class: "auth-input" %>
+    </div>
+    <%= f.submit "Salvar nova senha", class: "auth-submit" %>
+  <% end %>
+  <p class="auth-footer-link"><%= link_to "Voltar para entrar", new_user_session_path %></p>
+</div>

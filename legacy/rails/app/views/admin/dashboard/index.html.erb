@@ -1,0 +1,9 @@
+<%= render "shared/page_header", eyebrow: "Administração", title: "Visão da plataforma", description: "Acompanhe o cadastro de contas e os acessos administrativos.", action_text: "Ver usuários", action_path: admin_users_path %>
+<div class="metrics-grid">
+  <%= render "shared/metric_card", label: "Usuários", value: @users_count, subtitle: "Total de contas" %>
+  <%= render "shared/metric_card", label: "Novos cadastros", value: @new_users_count, subtitle: "Últimos 30 dias", variant: "success" %>
+  <%= render "shared/metric_card", label: "Administradores", value: @admins_count, subtitle: "Contas com acesso administrativo" %>
+</div>
+<%= render "shared/panel", title: "Cadastros recentes", description: "As últimas contas criadas na plataforma." do %>
+  <%= render "admin/users_table", users: @recent_users %>
+<% end %>

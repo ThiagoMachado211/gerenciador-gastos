@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+
+abort "This release uses inline Active Job; no separate worker is required. See docs/DEPLOY.md."

@@ -1,0 +1,8 @@
+one:
+  name: Ana
+  email: ana@example.test
+  encrypted_password: <%= Devise::Encryptor.digest(User, "Password123!") %>
+two:
+  name: Bruno
+  email: bruno@example.test
+  encrypted_password: <%= Devise::Encryptor.digest(User, "Password123!") %>

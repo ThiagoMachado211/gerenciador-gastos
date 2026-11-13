@@ -1,0 +1,5346 @@
+[
+  {
+    "withdrawn": null,
+    "summary": "Action Pack: Possible restoration of destroyed sessions in Action Dispatch CacheStore",
+    "id": "GHSA-2586-8ghr-69fj",
+    "aliases": [
+      "CVE-2026-126076"
+    ],
+    "modified": "2026-11-10T21:30:04.269150677Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N"
+      }
+    ],
+    "published": "2026-11-10T21:19:09Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "8.1.0.beta1"
+              },
+              {
+                "fixed": "8.1.4.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "actionpack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/actionpack"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "8.0.5.2"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "actionpack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/actionpack"
+        }
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-613"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-11-10T21:19:09Z",
+      "nvd_published_at": null
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/security/advisories/GHSA-2586-8ghr-69fj"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/5bb5ec66ed8faaf590ffe1222d7a5eb6e9d050f5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/d479192cf88a8b30a335a8bc25188a2d8e0f8d9f"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rails/rails"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.0.5.2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.1.4.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/actionpack/GHSA-2586-8ghr-69fj.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Action Pack: Possible IP spoofing in Action Dispatch RemoteIp",
+    "id": "GHSA-2gff-2mmg-m73p",
+    "aliases": [
+      "CVE-2026-126083"
+    ],
+    "modified": "2026-11-10T21:30:04.269070700Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      }
+    ],
+    "published": "2026-11-10T21:20:06Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "8.1.0.beta1"
+              },
+              {
+                "fixed": "8.1.4.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "actionpack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/actionpack"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed_at": "2026-11-10T21:20:06Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-348"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/security/advisories/GHSA-2gff-2mmg-m73p"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/2a01a5ac521184419d9a92fa2c25e102e68cd227"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rails/rails"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.1.4.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/actionpack/GHSA-2gff-2mmg-m73p.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Rack: Rack::Request#host_with_port (and #base_url / #url) return the raw invalid Host header — incomplete fix of CVE-2026-34835",
+    "id": "GHSA-2j8w-xcrc-x985",
+    "aliases": [
+      "CVE-2026-125109"
+    ],
+    "modified": "2026-11-10T19:30:04.014924024Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+      }
+    ],
+    "published": "2026-11-10T19:11:28Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "3.0.0"
+              },
+              {
+                "fixed": "3.1.23"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "rack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/rack"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "3.2.0"
+              },
+              {
+                "fixed": "3.2.8"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "rack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/rack"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed_at": "2026-11-10T19:11:28Z",
+      "nvd_published_at": "2026-11-09T22:18:42Z",
+      "cwe_ids": [
+        "CWE-1286"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/security/advisories/GHSA-2j8w-xcrc-x985"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125109"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/commit/4380381a56dc52556a436d6d794c8e18dc8b0565"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/commit/49386f460286b7346c7003b69a839de782cc8a39"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rack/rack"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/releases/tag/v3.1.23"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/releases/tag/v3.2.8"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rack/GHSA-2j8w-xcrc-x985.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Puma PROXY Protocol v1 Accepts Repeated Protocol Headers on Persistent Connections",
+    "id": "GHSA-2vqw-3mp8-cgmx",
+    "aliases": [
+      "CVE-2026-47737"
+    ],
+    "modified": "2026-11-02T22:15:04.376466721Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+      }
+    ],
+    "published": "2026-06-09T00:09:44Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "8.0.0"
+              },
+              {
+                "fixed": "8.0.2"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "puma",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/puma"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "5.5.0"
+              },
+              {
+                "fixed": "7.2.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "puma",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/puma"
+        }
+      }
+    ],
+    "database_specific": {
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-09T00:09:44Z",
+      "nvd_published_at": "2026-07-14T20:17:03Z",
+      "cwe_ids": [
+        "CWE-290",
+        "CWE-345"
+      ]
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/puma/puma/security/advisories/GHSA-2vqw-3mp8-cgmx"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/puma/puma/pull/3944"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/puma/puma/pull/3947"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/puma/puma/commit/439c6136d9c2275721b7864db3ee78af7c80889f"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/puma/puma/commit/ebe9db3929ab8299d19c8f5b41e8ef4f4b22fa58"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/puma/puma"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/puma/puma/releases/tag/v7.2.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/puma/puma/releases/tag/v8.0.2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/puma/CVE-2026-47737.yml"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-47737"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.cve.org/CVERecord/SearchResults?query=CVE-2026-47737"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Active Support: Possible XSS vulnerability in Active Support MessagePack serializer",
+    "id": "GHSA-2w9f-fxwj-w2qf",
+    "aliases": [
+      "CVE-2026-126075"
+    ],
+    "modified": "2026-11-10T21:45:04.318644879Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N"
+      }
+    ],
+    "published": "2026-11-10T21:27:12Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "8.1.0.beta1"
+              },
+              {
+                "fixed": "8.1.4.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "activesupport",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/activesupport"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed_at": "2026-11-10T21:27:12Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/security/advisories/GHSA-2w9f-fxwj-w2qf"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/4ca090665976e6fbc471c38689b399f84b43cdc7"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rails/rails"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.1.4.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/activesupport/GHSA-2w9f-fxwj-w2qf.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "websocket-driver-ruby: Denial of service via malformed Host header",
+    "id": "GHSA-2x63-gw47-w4mm",
+    "aliases": [
+      "CVE-2026-61666"
+    ],
+    "modified": "2026-11-02T21:15:04.252525532Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H"
+      }
+    ],
+    "published": "2026-07-21T18:34:42Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.8.2"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "websocket-driver",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/websocket-driver"
+        }
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-248"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-07-21T18:34:42Z",
+      "nvd_published_at": "2026-08-17T17:16:39Z"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/faye/websocket-driver-ruby/security/advisories/GHSA-2x63-gw47-w4mm"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61666"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/faye/websocket-driver-ruby/commit/7d6fd87759a2fdc83590d3b49ffa661dc53fa128"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/faye/websocket-driver-ruby"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/a58f1d0a3343e85cef597970f2c5458dcfbaf909/gems/websocket-driver/CVE-2026-61666.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "websocket-driver: Resource limit bypass via message compression",
+    "id": "GHSA-33ph-fccm-39pj",
+    "aliases": [
+      "CVE-2026-54464"
+    ],
+    "modified": "2026-09-10T03:50:51.444898994Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:L"
+      }
+    ],
+    "published": "2026-07-15T22:03:59Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.8.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "websocket-driver",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/websocket-driver"
+        }
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-770"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-07-15T22:03:59Z",
+      "nvd_published_at": "2026-07-17T20:17:26Z"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/faye/websocket-driver-ruby/security/advisories/GHSA-33ph-fccm-39pj"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54464"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/faye/websocket-driver-ruby/commit/fa8641724f10bf3273585f1dcf9041f540bbd036"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/faye/websocket-driver-ruby"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/faye/websocket-driver-ruby/releases/tag/0.8.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/websocket-driver/CVE-2026-54464.yml"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.cve.org/CVERecord/SearchResults?query=CVE-2026-54464"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Nokogiri: Use-After-Free in Nokogiri when replacing an attribute value",
+    "id": "GHSA-3w22-6jfg-527w",
+    "aliases": [
+      "CVE-2026-126064"
+    ],
+    "modified": "2026-11-10T21:00:04.036274050Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "published": "2026-11-10T20:51:19Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.19.5"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "nokogiri",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/nokogiri"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-11-10T20:51:19Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-416"
+      ],
+      "severity": "LOW"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-3w22-6jfg-527w"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/pull/3752"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/commit/b15b518db9fd15fd6b046f73d1439c282e5cc425"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/commit/feaed3c8c9bd9d81d064d4ca09b16044cd705d6f"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/nokogiri/GHSA-3w22-6jfg-527w.yml"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/sparklemotion/nokogiri"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/releases/tag/v1.19.5"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Net::IMAP: Command Injection via ID command argument",
+    "id": "GHSA-46q3-7gv7-qmgg",
+    "aliases": [
+      "CVE-2026-47242"
+    ],
+    "modified": "2026-09-10T03:51:07.764671473Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:P/VC:N/VI:H/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "published": "2026-06-09T20:31:52Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.6.0"
+              },
+              {
+                "fixed": "0.6.4.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.5.15"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed_at": "2026-06-09T20:31:52Z",
+      "nvd_published_at": "2026-06-22T21:16:24Z",
+      "cwe_ids": [
+        "CWE-77",
+        "CWE-93"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/security/advisories/GHSA-46q3-7gv7-qmgg"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47242"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/ruby/net-imap"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.6.4.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/net-imap/CVE-2026-47242.yml"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.cve.org/CVERecord?id=CVE-2026-47242"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "rubyzip path traversal vulnerability",
+    "id": "GHSA-47m2-wp7j-p9vc",
+    "aliases": [
+      "CVE-2026-85396"
+    ],
+    "modified": "2026-09-25T19:45:09.880068387Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N"
+      }
+    ],
+    "published": "2026-09-03T21:31:16Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "3.4.0"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "rubyzip",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/rubyzip"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed_at": "2026-09-25T19:25:52Z",
+      "nvd_published_at": "2026-09-03T19:17:31Z",
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true
+    },
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85396"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubyzip/rubyzip/commit/17edfbf4423b83211b075acc23a7d8640da63449"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/geo-chen/oss/blob/main/rubyzip.md"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rubyzip/CVE-2026-85396.yml"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rubyzip/rubyzip"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubyzip/rubyzip/blob/v3.3.1/lib/zip/entry.rb"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubyzip/rubyzip/releases/tag/v3.4.0"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.vulncheck.com/advisories/rubyzip-before-3.4.0-path-traversal-in-zip-entry-extract-via-sibling-directory-prefix"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "MessagePack::Buffer#clear Use-After-Free that Enables Cross-Buffer Disclosure",
+    "id": "GHSA-4mrv-5p47-p938",
+    "aliases": [
+      "CVE-2026-54522"
+    ],
+    "modified": "2026-09-10T03:51:10.426858154Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N"
+      }
+    ],
+    "published": "2026-07-30T16:33:12Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.8.2"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "msgpack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/msgpack"
+        }
+      }
+    ],
+    "database_specific": {
+      "severity": "LOW",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-07-30T16:33:12Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-416"
+      ]
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/msgpack/msgpack-ruby/security/advisories/GHSA-4mrv-5p47-p938"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/msgpack/msgpack-ruby/commit/5627d71606b565641d2dd501b82aae862f4abe90"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/msgpack/msgpack-ruby"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/msgpack/CVE-2026-54522.yml"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.cve.org/CVERecord/SearchResults?query=CVE-2026-54522"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Nokogiri: Mutation XSS through `noscript` content in Nokogiri's HTML5 serializer",
+    "id": "GHSA-4p39-36wj-23h4",
+    "aliases": [
+      "CVE-2026-126063"
+    ],
+    "modified": "2026-11-10T21:00:04.024722735Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N"
+      }
+    ],
+    "published": "2026-11-10T20:47:36Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "1.12.0"
+              },
+              {
+                "fixed": "1.19.5"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "nokogiri",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/nokogiri"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-11-10T20:47:36Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-116",
+        "CWE-79"
+      ],
+      "severity": "LOW"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-4p39-36wj-23h4"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/pull/3752"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/commit/3e84df6ff7ab4d78f446e3a415430bd69a055d32"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/commit/c6c0bffbdcd194694995acafeeed27326b0805f8"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/nokogiri/GHSA-4p39-36wj-23h4.yml"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/sparklemotion/nokogiri"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/releases/tag/v1.19.5"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Active Storage: Possible DoS vulnerability in Active Storage proxy mode via storage errors during streaming",
+    "id": "GHSA-4v2w-w6g6-f8f8",
+    "aliases": [
+      "CVE-2026-126071"
+    ],
+    "modified": "2026-11-10T21:45:04.235740111Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H"
+      }
+    ],
+    "published": "2026-11-10T21:24:31Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "8.1.0.beta1"
+              },
+              {
+                "fixed": "8.1.4.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "activestorage",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/activestorage"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "8.0.0.beta1"
+              },
+              {
+                "fixed": "8.0.5.2"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "activestorage",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/activestorage"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-11-10T21:24:31Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-772"
+      ],
+      "severity": "MODERATE"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/security/advisories/GHSA-4v2w-w6g6-f8f8"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/3c67a693fb21870ecb1222e3da59d5c491a62009"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/655b4442de136a3701334607f634d698bf9d5b82"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rails/rails"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.0.5.2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.1.4.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/activestorage/GHSA-4v2w-w6g6-f8f8.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Action Mailbox: Possible signature replay in Action Mailbox Mailgun ingress",
+    "id": "GHSA-5957-c7qm-m469",
+    "aliases": [
+      "CVE-2026-126068"
+    ],
+    "modified": "2026-11-10T21:45:04.138225379Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+      }
+    ],
+    "published": "2026-11-10T21:28:16Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "8.1.0.beta1"
+              },
+              {
+                "fixed": "8.1.4.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "actionmailbox",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/actionmailbox"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "8.0.5.2"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "actionmailbox",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/actionmailbox"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-11-10T21:28:16Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-294"
+      ],
+      "severity": "LOW"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/security/advisories/GHSA-5957-c7qm-m469"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/4aa2ec66822bc4eb8b341a0608f1c90a3e371a34"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/c3a295c5c22266e8ec4d0e664e6923a299235e7a"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rails/rails"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.0.5.2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.1.4.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/actionmailbox/GHSA-5957-c7qm-m469.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Nokogiri: Possible Out-of-Bounds Read in `Nokogiri::XML::NodeSet#[]`",
+    "id": "GHSA-5prr-v3j2-97mh",
+    "aliases": [
+      "CVE-2026-57235"
+    ],
+    "modified": "2026-09-10T03:51:07.875324229Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "published": "2026-06-19T16:36:42Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.19.4"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "nokogiri",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/nokogiri"
+        }
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-125",
+        "CWE-190"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-19T16:36:42Z",
+      "nvd_published_at": null
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-5prr-v3j2-97mh"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/sparklemotion/nokogiri"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Loofah `allowed_uri?` does not detect `javascript:` URIs split by numeric character references without semicolons",
+    "id": "GHSA-5qhf-9phg-95m2",
+    "aliases": [
+      "CVE-2026-73492"
+    ],
+    "modified": "2026-09-10T03:51:10.544951806Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N"
+      }
+    ],
+    "published": "2026-07-21T22:03:11Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.25.0"
+              },
+              {
+                "fixed": "2.25.2"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "loofah",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/loofah"
+        }
+      }
+    ],
+    "database_specific": {
+      "severity": "LOW",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-07-21T22:03:11Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-184",
+        "CWE-79"
+      ]
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/flavorjones/loofah/security/advisories/GHSA-5qhf-9phg-95m2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/flavorjones/loofah/commit/f1be9d893b5a8dd79240441a912d8897e74c38c0"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/flavorjones/loofah"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/flavorjones/loofah/releases/tag/v2.25.2"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Rack: Multipart parsing allows DoS via unbounded scan buffer growth",
+    "id": "GHSA-5v64-555j-wjxm",
+    "aliases": [
+      "CVE-2026-125111"
+    ],
+    "modified": "2026-11-10T19:45:09.718626997Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+      }
+    ],
+    "published": "2026-11-10T19:35:49Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.2.25"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "rack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/rack"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "3.0.0"
+              },
+              {
+                "fixed": "3.1.23"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "rack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/rack"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "3.2.0"
+              },
+              {
+                "fixed": "3.2.8"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "rack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/rack"
+        }
+      }
+    ],
+    "database_specific": {
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-11-10T19:35:49Z",
+      "nvd_published_at": "2026-11-09T22:18:42Z",
+      "cwe_ids": [
+        "CWE-400"
+      ]
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/security/advisories/GHSA-5v64-555j-wjxm"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125111"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/commit/244e75a840cee0823f86d5d01dc374505a8abed8"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/commit/2eaa5b1026a03a43b6537b1a0b233707ba887702"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/commit/c9b4698595050838342bd3b5a0fc9ab908065f8f"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rack/rack"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rack/GHSA-5v64-555j-wjxm.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Nokogiri: Possible Use-After-Free when `Nokogiri::XML::Document#encoding=` raises an exception",
+    "id": "GHSA-5v8h-3h3q-446p",
+    "aliases": [
+      "CVE-2026-57236"
+    ],
+    "modified": "2026-09-10T03:50:48.442454970Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U"
+      }
+    ],
+    "published": "2026-06-19T16:35:58Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.19.4"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "nokogiri",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/nokogiri"
+        }
+      }
+    ],
+    "database_specific": {
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-416"
+      ],
+      "severity": "LOW",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-19T16:35:58Z"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-5v8h-3h3q-446p"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/sparklemotion/nokogiri"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Crass: Deeply nested CSS blocks and functions can trigger a SystemStackError or excessive memory usage",
+    "id": "GHSA-6jxj-px6v-747w",
+    "aliases": [
+      "CVE-2026-61846"
+    ],
+    "modified": "2026-10-29T16:45:05.394588176Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:L"
+      }
+    ],
+    "published": "2026-10-29T16:35:16Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.0.7"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "crass",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/crass"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed_at": "2026-10-29T16:35:16Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-400"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rgrove/crass/security/advisories/GHSA-6jxj-px6v-747w"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rgrove/crass/commit/cf68287356ec6e20d51cfc4a2d0c3912b7334e99"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rgrove/crass"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rgrove/crass/releases/tag/v1.0.7"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Crass : Large numeric exponents cause CPU and memory denial of service",
+    "id": "GHSA-6wmf-3r64-vcwv",
+    "aliases": [
+      "CVE-2026-61845"
+    ],
+    "modified": "2026-10-20T14:45:03.938633122Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H"
+      }
+    ],
+    "published": "2026-10-20T14:32:39Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.0.7"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "crass",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/crass"
+        }
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-674"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-20T14:32:39Z",
+      "nvd_published_at": null
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rgrove/crass/security/advisories/GHSA-6wmf-3r64-vcwv"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rgrove/crass"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rgrove/crass/releases/tag/v1.0.7"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/crass/GHSA-6wmf-3r64-vcwv.yml"
+      },
+      {
+        "type": "WEB",
+        "url": "https://rubygems.org/gems/crass/versions/1.0.7"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Concurrent Ruby: ReadWriteLock allows wrong-thread write release and stray read-release counter corruption",
+    "id": "GHSA-6wx8-w4f5-wwcr",
+    "aliases": [
+      "CVE-2026-54906"
+    ],
+    "modified": "2026-09-10T03:50:48.681965743Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:L/AC:H/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "published": "2026-06-19T20:47:41Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.3.7"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "concurrent-ruby",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/concurrent-ruby"
+        }
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-414",
+        "CWE-667"
+      ],
+      "severity": "LOW",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-19T20:47:41Z",
+      "nvd_published_at": null
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby-concurrency/concurrent-ruby/security/advisories/GHSA-6wx8-w4f5-wwcr"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/ruby-concurrency/concurrent-ruby"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "net-imap vulnerable to command Injection via unvalidated Symbol inputs",
+    "id": "GHSA-75xq-5h9v-w6px",
+    "aliases": [
+      "CVE-2026-42258"
+    ],
+    "modified": "2026-09-10T03:50:46.299743607Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:L"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:L/AC:H/AT:P/PR:N/UI:P/VC:N/VI:H/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "published": "2026-05-04T22:04:08Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.6.0"
+              },
+              {
+                "fixed": "0.6.4"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.5.0"
+              },
+              {
+                "fixed": "0.5.14"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.4.24"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-05-04T22:04:08Z",
+      "nvd_published_at": "2026-05-09T20:16:28Z",
+      "cwe_ids": [
+        "CWE-77",
+        "CWE-93"
+      ],
+      "severity": "MODERATE"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/security/advisories/GHSA-75xq-5h9v-w6px"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42258"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/commit/aec06996eb87a7e1bbcef1f9f8926e8add2b8c71"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/commit/9db3e9d60bfb8f3735ea95015bf8a700f4af9cbb"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/commit/6bf02aef7e0b5931010c36e377f79a71636b306b"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:33462"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:37238"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:37397"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:38694"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:40380"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/security/cve/CVE-2026-42258"
+      },
+      {
+        "type": "WEB",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2468498"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/ruby/net-imap"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.4.24"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.5.14"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.6.4"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/net-imap/CVE-2026-42258.yml"
+      },
+      {
+        "type": "WEB",
+        "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-42258.json"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:33512"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:33514"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:33515"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:33540"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:33565"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:33576"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:33577"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:33630"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:33721"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:34076"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:35447"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:35834"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:35866"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:35867"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:35895"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:36099"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2026:36978"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Active Support: Possible DoS vulnerability in Active Support safe_constantize",
+    "id": "GHSA-8474-xrp6-wh69",
+    "aliases": [
+      "CVE-2026-126080"
+    ],
+    "modified": "2026-11-10T21:45:04.323273690Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      }
+    ],
+    "published": "2026-11-10T21:34:11Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "8.1.0.beta1"
+              },
+              {
+                "fixed": "8.1.4.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "activesupport",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/activesupport"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "8.0.5.2"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "activesupport",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/activesupport"
+        }
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-74"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-11-10T21:34:11Z",
+      "nvd_published_at": null
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/security/advisories/GHSA-8474-xrp6-wh69"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/210ac22d446c8e2625b091e79256806b836eee20"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/95aa9e416016524956d4904fed96eaed079580bb"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rails/rails"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.0.5.2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.1.4.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/activesupport/GHSA-8474-xrp6-wh69.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Nokogiri: XML::Schema on JRuby allows network requests when NONET is set, bypassing CVE-2020-26247",
+    "id": "GHSA-8678-w3jw-xfc2",
+    "aliases": [
+      "CVE-2026-57234"
+    ],
+    "modified": "2026-09-10T03:51:08.233410080Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:N/A:N"
+      }
+    ],
+    "published": "2026-06-19T16:36:11Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.19.4"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "nokogiri",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/nokogiri"
+        }
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-178",
+        "CWE-184",
+        "CWE-611"
+      ],
+      "severity": "LOW",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-19T16:36:11Z",
+      "nvd_published_at": null
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-8678-w3jw-xfc2"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/sparklemotion/nokogiri"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "net-imap vulnerable to denial of service via high iteration count for `SCRAM-*` authentication",
+    "id": "GHSA-87pf-fpwv-p7m7",
+    "aliases": [
+      "CVE-2026-42256"
+    ],
+    "modified": "2026-09-10T03:51:04.948392726Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+      }
+    ],
+    "published": "2026-05-04T22:03:28Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.6.0"
+              },
+              {
+                "fixed": "0.6.4"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.5.0"
+              },
+              {
+                "fixed": "0.5.14"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.4.0"
+              },
+              {
+                "fixed": "0.4.24"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed_at": "2026-05-04T22:03:28Z",
+      "nvd_published_at": "2026-05-09T20:16:28Z",
+      "cwe_ids": [
+        "CWE-1322",
+        "CWE-770"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/security/advisories/GHSA-87pf-fpwv-p7m7"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42256"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/commit/158d0b505074397cdb5ceb58935e42dd2bcfa612"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/commit/808001bc45c06f7297a7e96d341279e041a7f7f4"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/commit/99f59eab6064955a23debd95410263ad144df758"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/ruby/net-imap"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.4.24"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.5.14"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.6.4"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/net-imap/CVE-2026-42256.yml"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.rfc-editor.org/rfc/rfc7804.html#page-15"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "websocket-driver: Memory exhaustion in HTTP header parser",
+    "id": "GHSA-8j3g-f24p-4mpw",
+    "aliases": [
+      "CVE-2026-54465"
+    ],
+    "modified": "2026-09-10T03:50:51.663838014Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:L"
+      }
+    ],
+    "published": "2026-07-15T22:05:39Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.8.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "websocket-driver",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/websocket-driver"
+        }
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-400",
+        "CWE-770"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-07-15T22:05:39Z",
+      "nvd_published_at": "2026-07-17T20:17:26Z"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/faye/websocket-driver-ruby/security/advisories/GHSA-8j3g-f24p-4mpw"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54465"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/faye/websocket-driver-ruby/commit/17b569f232896e71d458404ccf4854f80e987710"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/faye/websocket-driver-ruby"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/faye/websocket-driver-ruby/releases/tag/0.8.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/websocket-driver/CVE-2026-54465.yml"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.cve.org/CVERecord/SearchResults?query=CVE-2026-54465"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Net::IMAP: Command Injection via non-synchronizing literal in \"raw\" argument",
+    "id": "GHSA-8p34-64r3-mwg8",
+    "aliases": [
+      "CVE-2026-47240"
+    ],
+    "modified": "2026-09-10T03:51:08.225147750Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:P/VC:N/VI:H/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "published": "2026-06-09T18:36:04Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.6.0"
+              },
+              {
+                "fixed": "0.6.4.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.5.15"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-77",
+        "CWE-93"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-09T18:36:04Z",
+      "nvd_published_at": "2026-06-22T21:16:24Z"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/security/advisories/GHSA-8p34-64r3-mwg8"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47240"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/ruby/net-imap"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.6.4.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/net-imap/CVE-2026-47240.yml"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.cve.org/CVERecord?id=CVE-2026-47240"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Crass: Non-ASCII characters cause superlinear CPU consumption",
+    "id": "GHSA-8vfg-2r28-hvhj",
+    "aliases": [
+      "CVE-2026-61848"
+    ],
+    "modified": "2026-10-29T16:45:04.487777722Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:L"
+      }
+    ],
+    "published": "2026-10-29T16:35:29Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.0.7"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "crass",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/crass"
+        }
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-400"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-29T16:35:29Z",
+      "nvd_published_at": null
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rgrove/crass/security/advisories/GHSA-8vfg-2r28-hvhj"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rgrove/crass"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rgrove/crass/releases/tag/v1.0.7"
+      },
+      {
+        "type": "WEB",
+        "url": "http://github.com/rgrove/crass/commit/da29664648bf80a97a6439e030a4814291c9afa5"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Loofah `allowed_uri?` does not detect `javascript:` URIs split by named whitespace character references",
+    "id": "GHSA-8whx-365g-h9vv",
+    "aliases": [
+      "CVE-2026-73491"
+    ],
+    "modified": "2026-09-10T03:51:11.109228326Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N"
+      }
+    ],
+    "published": "2026-07-21T15:04:14Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.25.0"
+              },
+              {
+                "fixed": "2.25.2"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "loofah",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/loofah"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed_at": "2026-07-21T15:04:14Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-184"
+      ],
+      "severity": "LOW",
+      "github_reviewed": true
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/flavorjones/loofah/security/advisories/GHSA-8whx-365g-h9vv"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/flavorjones/loofah/commit/5e91af861e3cdab47b91dd0b81f3afdfd13a5e19"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/flavorjones/loofah"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/flavorjones/loofah/releases/tag/v2.25.2"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Nokogiri: Null Pointer Dereference calling methods on uninitialized wrapper classes",
+    "id": "GHSA-9cv2-cfxc-v4v2",
+    "aliases": [
+      "CVE-2026-57434"
+    ],
+    "modified": "2026-09-10T03:50:49.239685503Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U"
+      }
+    ],
+    "published": "2026-06-19T16:36:23Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.19.4"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "nokogiri",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/nokogiri"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-19T16:36:23Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-476"
+      ],
+      "severity": "LOW"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-9cv2-cfxc-v4v2"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/sparklemotion/nokogiri"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Loofah: SVG `href` attribute bypasses local-reference restriction",
+    "id": "GHSA-9wjq-cp2p-hrgf",
+    "aliases": [
+      "CVE-2026-73490"
+    ],
+    "modified": "2026-09-10T03:51:11.411106078Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N"
+      }
+    ],
+    "published": "2026-07-21T22:01:58Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.25.2"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "loofah",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/loofah"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-07-21T22:01:58Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "severity": "MODERATE"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/flavorjones/loofah/security/advisories/GHSA-9wjq-cp2p-hrgf"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/flavorjones/loofah/commit/20867b9be689521887364b74822c41ef830523c9"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/flavorjones/loofah"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/flavorjones/loofah/releases/tag/v2.25.2"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Net::IMAP: Denial of Service via incomplete raw argument validation",
+    "id": "GHSA-c4fp-cxrr-mj66",
+    "aliases": [
+      "CVE-2026-47241"
+    ],
+    "modified": "2026-09-10T03:51:08.385505121Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "published": "2026-06-09T18:36:11Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.6.0"
+              },
+              {
+                "fixed": "0.6.4.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.5.15"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-162",
+        "CWE-182",
+        "CWE-186"
+      ],
+      "severity": "LOW",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-09T18:36:11Z",
+      "nvd_published_at": "2026-06-22T21:16:24Z"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/security/advisories/GHSA-c4fp-cxrr-mj66"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47241"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/ruby/net-imap"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.6.4.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/net-imap/CVE-2026-47241.yml"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.cve.org/CVERecord?id=CVE-2026-47241"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Nokogiri CSS selector tokenizer has regular expression backtracking",
+    "id": "GHSA-c4rq-3m3g-8wgx",
+    "aliases": [
+      "CVE-2026-79770"
+    ],
+    "modified": "2026-09-10T03:50:46.628632949Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      }
+    ],
+    "published": "2026-05-06T18:24:18Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.19.3"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "nokogiri",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/nokogiri"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed_at": "2026-05-06T18:24:18Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-1333"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-c4rq-3m3g-8wgx"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79770"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/sparklemotion/nokogiri"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.vulncheck.com/advisories/nokogiri-before-redos-via-css-selector-tokenizer"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Rails HTML Sanitizers: Possible XSS vulnerability with certain configurations",
+    "id": "GHSA-cj75-f6xr-r4g7",
+    "aliases": [
+      "CVE-2026-73648"
+    ],
+    "modified": "2026-09-10T03:51:11.467365597Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N"
+      }
+    ],
+    "published": "2026-07-21T22:05:28Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "1.0.3"
+              },
+              {
+                "fixed": "1.7.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "rails-html-sanitizer",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/rails-html-sanitizer"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-07-21T22:05:28Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "severity": "MODERATE"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails-html-sanitizer/security/advisories/GHSA-cj75-f6xr-r4g7"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails-html-sanitizer/commit/74dcb8053e6da9921246ce71b06ad9fd65b19586"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rails/rails-html-sanitizer"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails-html-sanitizer/releases/tag/v1.7.1"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "websocket-driver: Memory exhaustion via abuse of protocol length headers",
+    "id": "GHSA-ghhp-3qvg-889p",
+    "aliases": [
+      "CVE-2026-54463"
+    ],
+    "modified": "2026-09-10T03:50:52.264963603Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:L"
+      }
+    ],
+    "published": "2026-07-15T22:01:52Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.8.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "websocket-driver",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/websocket-driver"
+        }
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-400",
+        "CWE-770"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-07-15T22:01:52Z",
+      "nvd_published_at": "2026-07-17T20:17:26Z"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/faye/websocket-driver-ruby/security/advisories/GHSA-ghhp-3qvg-889p"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54463"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/faye/websocket-driver-ruby/commit/d0141f041f6e3677a951255d547a313e732ccbe0"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/faye/websocket-driver-ruby"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/faye/websocket-driver-ruby/releases/tag/0.8.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/websocket-driver/CVE-2026-54463.yml"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.cve.org/CVERecord/SearchResults?query=CVE-2026-54463"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Action Pack: Missing SameSite attribute on session cookies from Action Pack session stores",
+    "id": "GHSA-gmj8-hvj3-49mw",
+    "aliases": [
+      "CVE-2026-126067"
+    ],
+    "modified": "2026-11-10T21:45:03.954839319Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N"
+      }
+    ],
+    "published": "2026-11-10T21:25:18Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "8.1.0.beta1"
+              },
+              {
+                "fixed": "8.1.4.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "actionpack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/actionpack"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "8.0.5.2"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "actionpack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/actionpack"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed_at": "2026-11-10T21:25:18Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-352"
+      ],
+      "severity": "LOW",
+      "github_reviewed": true
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/security/advisories/GHSA-gmj8-hvj3-49mw"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/2d9f502df941e31ce9bad0e846564f49396bed46"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/f2392996be723708271a8d30bfcf0edc221e53ef"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rails/rails"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.0.5.2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.1.4.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/actionpack/GHSA-gmj8-hvj3-49mw.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Concurrent Ruby : `AtomicReference#update` livelocks when the stored value is `Float::NAN`",
+    "id": "GHSA-h8w8-99g7-qmvj",
+    "aliases": [
+      "CVE-2026-54904"
+    ],
+    "modified": "2026-09-10T03:50:49.790653499Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+      }
+    ],
+    "published": "2026-06-19T20:47:35Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.3.7"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "concurrent-ruby",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/concurrent-ruby"
+        }
+      }
+    ],
+    "database_specific": {
+      "nvd_published_at": "2026-06-24T17:17:29Z",
+      "cwe_ids": [
+        "CWE-835"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-19T20:47:35Z"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby-concurrency/concurrent-ruby/security/advisories/GHSA-h8w8-99g7-qmvj"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54904"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby-concurrency/concurrent-ruby/commit/6e37e0644b83b182971dc540d2e4bee38df61386"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/ruby-concurrency/concurrent-ruby"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby-concurrency/concurrent-ruby/releases/tag/v1.3.7"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/concurrent-ruby/CVE-2026-54904.yml"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.cve.org/CVERecord/SearchResults?query=CVE-2026-54904"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Active Storage: Possible circumvention of file size limits in Active Storage direct uploads to Google Cloud Storage",
+    "id": "GHSA-hfr4-8rjc-97m2",
+    "aliases": [
+      "CVE-2026-126085"
+    ],
+    "modified": "2026-11-10T21:45:04.240426616Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+      }
+    ],
+    "published": "2026-11-10T21:37:19Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "8.1.0.beta1"
+              },
+              {
+                "fixed": "8.1.4.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "activestorage",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/activestorage"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "8.0.5.2"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "activestorage",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/activestorage"
+        }
+      }
+    ],
+    "database_specific": {
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-11-10T21:37:19Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-602"
+      ]
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/security/advisories/GHSA-hfr4-8rjc-97m2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/7fe85a72a789eae5ee070ce3ee1dad10a8a5f70c"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/e19916cea31cbfb0030b165ae853b741f8dd57a7"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rails/rails"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.0.5.2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.1.4.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/activestorage/GHSA-hfr4-8rjc-97m2.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "net-imap vulnerable to command Injection via \"raw\" arguments to multiple commands",
+    "id": "GHSA-hm49-wcqc-g2xg",
+    "aliases": [
+      "CVE-2026-42257"
+    ],
+    "modified": "2026-09-10T03:51:05.961176671Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:P/VC:N/VI:H/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "published": "2026-05-04T22:04:41Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.6.0"
+              },
+              {
+                "fixed": "0.6.4"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.5.0"
+              },
+              {
+                "fixed": "0.5.14"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.4.24"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-77",
+        "CWE-93"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-05-04T22:04:41Z",
+      "nvd_published_at": "2026-05-09T20:16:28Z"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/security/advisories/GHSA-hm49-wcqc-g2xg"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42257"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/commit/0ec4fd351263e8b9a4f683713427827b7b1ad974"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/commit/47c72186d272441878ca73c9499f66013829ca2f"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/commit/6bf02aef7e0b5931010c36e377f79a71636b306b"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/commit/a4f7649c3da77dec7631f03a037a478eb4330048"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/commit/aec06996eb87a7e1bbcef1f9f8926e8add2b8c71"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/ruby/net-imap"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.4.24"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.5.14"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.6.4"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/net-imap/CVE-2026-42257.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Devise has an Open Redirect via Unvalidated `request.referrer` in Timeoutable Session Timeout Handler",
+    "id": "GHSA-jp94-3292-c3xv",
+    "aliases": [
+      "CVE-2026-40295"
+    ],
+    "modified": "2026-09-10T03:51:06.249835585Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+      }
+    ],
+    "published": "2026-05-08T15:41:47Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "5.0.4"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "devise",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/devise"
+        }
+      }
+    ],
+    "database_specific": {
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-05-08T15:41:47Z",
+      "nvd_published_at": "2026-05-22T20:16:34Z",
+      "cwe_ids": [
+        "CWE-601"
+      ]
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/heartcombo/devise/security/advisories/GHSA-jp94-3292-c3xv"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40295"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/heartcombo/devise/commit/025fe2124f9928766fc46520e999633b598d0360"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/heartcombo/devise"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/devise/CVE-2026-40295.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Mail: Email address spoofing via malformed RFC 2047 encoded-words",
+    "id": "GHSA-mvxr-6m87-mv2q",
+    "aliases": [
+      "CVE-2026-63435"
+    ],
+    "modified": "2026-09-10T03:50:54.686601853Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+      }
+    ],
+    "published": "2026-09-02T22:02:32Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.9.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "mail",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/mail"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed_at": "2026-09-02T22:02:32Z",
+      "nvd_published_at": "2026-09-01T21:18:35Z",
+      "cwe_ids": [
+        "CWE-436"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/mikel/mail/security/advisories/GHSA-mvxr-6m87-mv2q"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63435"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mikel/mail/pull/1664"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mikel/mail/commit/f9d59c2e447af42e2c3dec5a56b1bb25c7292859"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/mikel/mail"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mikel/mail/releases/tag/2.9.1"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Active Storage: Possible DoS vulnerability in Active Storage filename handling",
+    "id": "GHSA-p2pm-g2h6-7j5j",
+    "aliases": [
+      "CVE-2026-126074"
+    ],
+    "modified": "2026-11-10T21:45:04.231789508Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+      }
+    ],
+    "published": "2026-11-10T21:33:12Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "8.1.0.beta1"
+              },
+              {
+                "fixed": "8.1.4.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "activestorage",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/activestorage"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "8.0.5.2"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "activestorage",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/activestorage"
+        }
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-248"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-11-10T21:33:12Z",
+      "nvd_published_at": null
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/security/advisories/GHSA-p2pm-g2h6-7j5j"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/60f22af88b71eae251f112d8c0237a08a8832692"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/9b0d4bef2211a2c08cab2e0ea17fa1d0efd5d47a"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rails/rails"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.0.5.2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.1.4.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/activestorage/GHSA-p2pm-g2h6-7j5j.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Nokogiri: Possible Use-After-Free when directly using `NokogirI::XML::XPathContext` beyond document lifetime",
+    "id": "GHSA-p67v-3w7g-wjg7",
+    "aliases": [
+      "CVE-2026-57437"
+    ],
+    "modified": "2026-09-10T03:51:09.256741560Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U/U:Clear"
+      }
+    ],
+    "published": "2026-06-19T16:37:13Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.19.4"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "nokogiri",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/nokogiri"
+        }
+      }
+    ],
+    "database_specific": {
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-416"
+      ],
+      "severity": "LOW",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-19T16:37:13Z"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-p67v-3w7g-wjg7"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/sparklemotion/nokogiri"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Rack: Multipart boundary ambiguity guard in Rack::Multipart::Parser can be bypassed with a quoted boundary value, allowing WAF bypass",
+    "id": "GHSA-p8x9-v4hv-2w4g",
+    "aliases": [
+      "CVE-2026-125108"
+    ],
+    "modified": "2026-11-10T19:45:09.723995662Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+      }
+    ],
+    "published": "2026-11-10T19:26:28Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.2.25"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "rack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/rack"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "3.0.0"
+              },
+              {
+                "fixed": "3.1.23"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "rack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/rack"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "3.2.0"
+              },
+              {
+                "fixed": "3.2.8"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "rack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/rack"
+        }
+      }
+    ],
+    "database_specific": {
+      "severity": "LOW",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-11-10T19:26:28Z",
+      "nvd_published_at": "2026-11-09T22:18:41Z",
+      "cwe_ids": [
+        "CWE-436"
+      ]
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/security/advisories/GHSA-p8x9-v4hv-2w4g"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125108"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/commit/19a1a19cb4da97d61c8d5effeb2e927c44370ae9"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/commit/a29512324265790a5536b830490075d0d79323be"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/commit/d5e928b803da30b8e40171dbd4be39bed7daa6fa"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rack/rack"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/releases/tag/v2.2.25"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/releases/tag/v3.1.23"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/releases/tag/v3.2.8"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rack/GHSA-p8x9-v4hv-2w4g.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Nokogiri: Possible Use-After-Free when setting an attribute value via `Nokogiri::XML::Attr#value=` or `#content=`",
+    "id": "GHSA-phwj-rprq-35pp",
+    "aliases": [
+      "CVE-2026-57435"
+    ],
+    "modified": "2026-09-10T03:51:09.239115507Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U"
+      }
+    ],
+    "published": "2026-06-19T16:37:46Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.19.4"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "nokogiri",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/nokogiri"
+        }
+      }
+    ],
+    "database_specific": {
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-416",
+        "CWE-825"
+      ],
+      "severity": "LOW",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-19T16:37:46Z"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-phwj-rprq-35pp"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/sparklemotion/nokogiri"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Crass: Incorrect tokenization of bad URLs enables CSS sanitizer bypass",
+    "id": "GHSA-pq4g-8rxf-4g29",
+    "aliases": [
+      "CVE-2026-116695"
+    ],
+    "modified": "2026-10-28T23:00:04.150123033Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N"
+      }
+    ],
+    "published": "2026-10-28T22:42:53Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.0.8"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "crass",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/crass"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed_at": "2026-10-28T22:42:53Z",
+      "nvd_published_at": "2026-10-27T21:18:05Z",
+      "cwe_ids": [
+        "CWE-436"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rgrove/crass/security/advisories/GHSA-pq4g-8rxf-4g29"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116695"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rgrove/crass/commit/689fc45c632fdf3803b2f4e844ffc9cca3b08f34"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rgrove/crass"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rgrove/crass/releases/tag/v1.0.8"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/crass/GHSA-pq4g-8rxf-4g29.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "net-imap has quadratic complexity when reading response literals",
+    "id": "GHSA-q2mw-fvj9-vvcw",
+    "aliases": [
+      "CVE-2026-42245"
+    ],
+    "modified": "2026-09-10T03:51:06.713077892Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "published": "2026-05-04T22:02:56Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.6.0"
+              },
+              {
+                "fixed": "0.6.4"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.5.0"
+              },
+              {
+                "fixed": "0.5.14"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.4.24"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      }
+    ],
+    "database_specific": {
+      "nvd_published_at": "2026-05-09T20:16:28Z",
+      "cwe_ids": [
+        "CWE-407"
+      ],
+      "severity": "LOW",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-05-04T22:02:56Z"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/security/advisories/GHSA-q2mw-fvj9-vvcw"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42245"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/commit/6091f7d6b1f3514cafbfe39c76f2b5d73de3ca96"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/commit/88d95231fc8afef11c1f074453f7d75b68c9dfda"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/commit/de685f91a4a4cc75eb80da898c2bf8af08d34819"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/ruby/net-imap"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.4.24"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.5.14"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.6.4"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/net-imap/CVE-2026-42245.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "ERB has an @_init deserialization guard bypass via def_module / def_method / def_class",
+    "id": "GHSA-q339-8rmv-2mhv",
+    "aliases": [
+      "CVE-2026-41316"
+    ],
+    "modified": "2026-09-10T03:51:02.746201088Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "published": "2026-04-24T15:36:05Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "4.0.3.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "erb",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/erb"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "4.0.4"
+              },
+              {
+                "fixed": "4.0.4.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "erb",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/erb"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "5.0.0"
+              },
+              {
+                "fixed": "6.0.1.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "erb",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/erb"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "6.0.2"
+              },
+              {
+                "fixed": "6.0.4"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "erb",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/erb"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-04-24T15:36:05Z",
+      "nvd_published_at": "2026-04-24T03:16:11Z",
+      "cwe_ids": [
+        "CWE-693"
+      ],
+      "severity": "HIGH"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/erb/security/advisories/GHSA-q339-8rmv-2mhv"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41316"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/ruby/erb"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/erb/CVE-2026-41316.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Puma PROXY Protocol v1 Parser Allows Remote Memory Exhaustion ",
+    "id": "GHSA-qpgp-93vx-g8v8",
+    "aliases": [
+      "CVE-2026-47736"
+    ],
+    "modified": "2026-11-02T22:15:04.375576543Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      }
+    ],
+    "published": "2026-06-08T23:55:44Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "8.0.0"
+              },
+              {
+                "fixed": "8.0.2"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "puma",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/puma"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "5.5.0"
+              },
+              {
+                "fixed": "7.2.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "puma",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/puma"
+        }
+      }
+    ],
+    "database_specific": {
+      "nvd_published_at": "2026-07-14T20:17:03Z",
+      "cwe_ids": [
+        "CWE-400"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-08T23:55:44Z"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/puma/puma/security/advisories/GHSA-qpgp-93vx-g8v8"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/puma/puma/commit/439c6136d9c2275721b7864db3ee78af7c80889f"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/puma/puma/commit/ebe9db3929ab8299d19c8f5b41e8ef4f4b22fa58"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/puma/puma"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/puma/puma/releases/tag/v7.2.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/puma/puma/releases/tag/v8.0.2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/puma/CVE-2026-47736.yml"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-47736"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.cve.org/CVERecord?id=CVE-2026-47736"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Action Pack: Possible cache poisoning in Action Pack content negotiation",
+    "id": "GHSA-r9jg-fmfx-2gv6",
+    "aliases": [
+      "CVE-2026-126073"
+    ],
+    "modified": "2026-11-10T21:45:03.954760453Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L"
+      }
+    ],
+    "published": "2026-11-10T21:26:12Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "8.1"
+              },
+              {
+                "fixed": "8.1.4.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "actionpack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/actionpack"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "8.0.5.2"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "actionpack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/actionpack"
+        }
+      }
+    ],
+    "database_specific": {
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-11-10T21:26:12Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-436"
+      ]
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/security/advisories/GHSA-r9jg-fmfx-2gv6"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/7a955ca36779938267c93902c47d1f55bab99b4b"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/b58c107abe9c1f10c1d6a4941402c60e4dc4742c"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rails/rails"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.0.5.2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.1.4.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/actionpack/GHSA-r9jg-fmfx-2gv6.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Nokogiri XSLT transform has a memory leak",
+    "id": "GHSA-v2fc-qm4h-8hqv",
+    "aliases": [
+      "CVE-2026-79771"
+    ],
+    "modified": "2026-09-10T03:50:47.698230799Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+      }
+    ],
+    "published": "2026-05-06T18:27:38Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.19.3"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "nokogiri",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/nokogiri"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-05-06T18:27:38Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-401"
+      ],
+      "severity": "MODERATE"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-v2fc-qm4h-8hqv"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79771"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/sparklemotion/nokogiri"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.vulncheck.com/advisories/nokogiri-before-memory-leak-via-xslt-transform"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Active Storage: Possible arbitrary file read and remote code execution in video previews, analysis and image processing",
+    "id": "GHSA-v924-7rp8-4mxh",
+    "aliases": [
+      "CVE-2026-126186"
+    ],
+    "modified": "2026-11-10T21:45:04.235839483Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "published": "2026-11-10T21:38:55Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "8.1.0.beta1"
+              },
+              {
+                "fixed": "8.1.4.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "activestorage",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/activestorage"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "8.0.5.2"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "activestorage",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/activestorage"
+        }
+      }
+    ],
+    "database_specific": {
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-11-10T21:38:55Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-646"
+      ]
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/security/advisories/GHSA-v924-7rp8-4mxh"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/72136ff39153bc8d63ecbc899993848eb3d6573e"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/8106938fb0a595f11006dd1497cd409e27d7d636"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rails/rails"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.0.5.2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.1.4.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/activestorage/GHSA-v924-7rp8-4mxh.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "JRuby: NONET is bypassed for external DTDs and entities when the systemId uses a short-form IPv4 host",
+    "id": "GHSA-v995-44v6-5fqm",
+    "aliases": [
+      "CVE-2026-126062"
+    ],
+    "modified": "2026-11-10T21:00:04.025096383Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+      }
+    ],
+    "published": "2026-11-10T20:52:38Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.19.5"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "nokogiri",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/nokogiri"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed_at": "2026-11-10T20:52:38Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-611",
+        "CWE-918"
+      ],
+      "severity": "LOW",
+      "github_reviewed": true
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-v995-44v6-5fqm"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/pull/3752"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/commit/97f41b65f4ee0cac859b87f0b26d2648c4806cb8"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/commit/e448ca2827a9198644610fb730259e12baacdeac"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/nokogiri/GHSA-v995-44v6-5fqm.yml"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/sparklemotion/nokogiri"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/releases/tag/v1.19.5"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "net-imap vulnerable to STARTTLS stripping via invalid response timing",
+    "id": "GHSA-vcgp-9326-pqcp",
+    "aliases": [
+      "CVE-2026-42246"
+    ],
+    "modified": "2026-09-10T03:50:47.706717838Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N"
+      }
+    ],
+    "published": "2026-05-04T22:01:52Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.6.0"
+              },
+              {
+                "fixed": "0.6.4"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.5.0"
+              },
+              {
+                "fixed": "0.5.14"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.4.0"
+              },
+              {
+                "fixed": "0.4.24"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.3.10"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "net-imap",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/net-imap"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-05-04T22:01:52Z",
+      "nvd_published_at": "2026-05-09T20:16:28Z",
+      "cwe_ids": [
+        "CWE-392",
+        "CWE-393",
+        "CWE-636",
+        "CWE-754",
+        "CWE-841"
+      ],
+      "severity": "HIGH"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/security/advisories/GHSA-vcgp-9326-pqcp"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42246"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/commit/0ede4c40b1523dfeaf95777b2678e54cc0fd9618"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/commit/24a4e770b43230286a05aa2a9746cdbb3eb8485e"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/commit/97e2488fb5401a1783bddd959dde007d9fbce42c"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/commit/f79d35bf5833f186e81044c57c843eda30c873da"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/ruby/net-imap"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.3.10"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.4.24"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.5.14"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/net-imap/releases/tag/v0.6.4"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/net-imap/CVE-2026-42246.yml"
+      },
+      {
+        "type": "WEB",
+        "url": "https://nostarttls.secvuln.info"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.rfc-editor.org/info/rfc8314"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Nokogiri: Possible Use-After-Free in XInclude Processing",
+    "id": "GHSA-wfpw-mmfh-qq69",
+    "aliases": [
+      "CVE-2026-57438"
+    ],
+    "modified": "2026-09-10T03:51:09.647017452Z",
+    "severity": null,
+    "published": "2026-06-19T16:37:25Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.19.4"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "nokogiri",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/nokogiri"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-19T16:37:25Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-416"
+      ],
+      "severity": "LOW"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-wfpw-mmfh-qq69"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/sparklemotion/nokogiri"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Nokogiri: Possible Use-After-Free when setting `Document#root=` to an invalid node type",
+    "id": "GHSA-wjv4-x9w8-wm3h",
+    "aliases": [
+      "CVE-2026-57436"
+    ],
+    "modified": "2026-09-10T03:50:50.907992171Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:U"
+      }
+    ],
+    "published": "2026-06-19T16:36:59Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.19.4"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "nokogiri",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/nokogiri"
+        }
+      }
+    ],
+    "database_specific": {
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-416"
+      ],
+      "severity": "LOW",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-19T16:36:59Z"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-wjv4-x9w8-wm3h"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/sparklemotion/nokogiri"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Concurrent Ruby: `ReentrantReadWriteLock` read-count overflow grants a write lock without exclusivity",
+    "id": "GHSA-wv3x-4vxv-whpp",
+    "aliases": [
+      "CVE-2026-54905"
+    ],
+    "modified": "2026-09-10T03:50:50.897491142Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "published": "2026-06-19T20:47:38Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.3.7"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "concurrent-ruby",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/concurrent-ruby"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-19T20:47:38Z",
+      "nvd_published_at": "2026-06-24T17:17:29Z",
+      "cwe_ids": [
+        "CWE-128"
+      ],
+      "severity": "LOW"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby-concurrency/concurrent-ruby/security/advisories/GHSA-wv3x-4vxv-whpp"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54905"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/ruby-concurrency/concurrent-ruby"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/concurrent-ruby/CVE-2026-54905.yml"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.cve.org/CVERecord/SearchResults?query=CVE-2026-54905"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Rack: Rack::Static header_rules bypass via dot-segment normalization mismatch",
+    "id": "GHSA-wvg4-6p58-3gh3",
+    "aliases": [
+      "CVE-2026-125110"
+    ],
+    "modified": "2026-11-10T19:00:04.397956603Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+      }
+    ],
+    "published": "2026-11-10T18:50:07Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.2.25"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "rack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/rack"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "3.0.0"
+              },
+              {
+                "fixed": "3.1.23"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "rack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/rack"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "3.2.0"
+              },
+              {
+                "fixed": "3.2.8"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "rack",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/rack"
+        }
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-180"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-11-10T18:50:07Z",
+      "nvd_published_at": "2026-11-09T22:18:42Z"
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/security/advisories/GHSA-wvg4-6p58-3gh3"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125110"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/commit/18a07fe553afb4d8a678d6a948cd6ba1e11e28be"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/commit/9d7f19484ffd5ed5e032678c26ee6eff96d3a0a3"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rack/rack/commit/e88097ccb88be44d06d47b42daffe04929516ee4"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rack/rack"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rack/GHSA-wvg4-6p58-3gh3.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Crass: A large number of adjacent CSS comments can trigger a SystemStackError",
+    "id": "GHSA-wwpr-jff3-395c",
+    "aliases": [
+      "CVE-2026-61847"
+    ],
+    "modified": "2026-10-29T16:45:06.064429996Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:L"
+      }
+    ],
+    "published": "2026-10-29T16:35:23Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.0.7"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "crass",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/crass"
+        }
+      }
+    ],
+    "database_specific": {
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-10-29T16:35:23Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-674"
+      ]
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rgrove/crass/security/advisories/GHSA-wwpr-jff3-395c"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rgrove/crass/commit/25d78cc607c54262e9d43ea1930f3ba5bb03dfb5"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rgrove/crass"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rgrove/crass/releases/tag/v1.0.7"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Ruby json: JSON generator heap buffer overflow when streaming to an IO",
+    "id": "GHSA-x2f5-4prf-w687",
+    "aliases": [
+      "CVE-2026-54696"
+    ],
+    "modified": "2026-09-10T03:51:12.575360401Z",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+      }
+    ],
+    "published": "2026-07-23T19:48:08Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.9.0"
+              },
+              {
+                "fixed": "2.19.9"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "json",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/json"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed_at": "2026-07-23T19:48:08Z",
+      "nvd_published_at": "2026-06-30T23:17:28Z",
+      "cwe_ids": [
+        "CWE-122",
+        "CWE-131",
+        "CWE-787"
+      ],
+      "severity": "LOW",
+      "github_reviewed": true
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/json/security/advisories/GHSA-x2f5-4prf-w687"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54696"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/json/commit/996bac686d64e4e3aaeae03b14a7f9ee9695ebdb"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/ruby/json"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ruby/json/releases/tag/v2.19.9"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/json/CVE-2026-54696.yml"
+      }
+    ]
+  },
+  {
+    "withdrawn": null,
+    "summary": "Active Storage has possible arbitrary file read and remote code execution in Active Storage variant processing",
+    "id": "GHSA-xr9x-r78c-5hrm",
+    "aliases": [
+      "CVE-2026-66066"
+    ],
+    "modified": "2026-09-10T03:51:12.686410422Z",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H"
+      }
+    ],
+    "published": "2026-07-30T18:23:33Z",
+    "affected": [
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "7.2.3.2"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "activestorage",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/activestorage"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "8.0.0.beta1"
+              },
+              {
+                "fixed": "8.0.5.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "activestorage",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/activestorage"
+        }
+      },
+      {
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "8.1.0.beta1"
+              },
+              {
+                "fixed": "8.1.3.1"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "activestorage",
+          "ecosystem": "RubyGems",
+          "purl": "pkg:gem/activestorage"
+        }
+      }
+    ],
+    "database_specific": {
+      "github_reviewed_at": "2026-07-30T18:23:33Z",
+      "nvd_published_at": null,
+      "cwe_ids": [
+        "CWE-1188"
+      ],
+      "severity": "CRITICAL",
+      "github_reviewed": true
+    },
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/security/advisories/GHSA-xr9x-r78c-5hrm"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/1c01bb587206ee6eb0e1179c2cef96a6a47acb1e"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/349e7a5d5b4b715af1e416db824f3c078a7d59e5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/commit/d79b7f4aa17dec8ce4960fef05733c8c0c7ef49a"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rails/rails"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v7.2.3.2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.0.5.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rails/rails/releases/tag/v8.1.3.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/activestorage/CVE-2026-66066.yml"
+      },
+      {
+        "type": "WEB",
+        "url": "https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.cve.org/CVERecord/SearchResults?query=CVE-2026-66066"
+      }
+    ]
+  }
+]

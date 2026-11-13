@@ -1,0 +1,16 @@
+<div class="table-responsive" tabindex="0" role="region" aria-label="Lista de usuários">
+  <table class="data-table">
+    <caption class="sr-only">Contas cadastradas na plataforma</caption>
+    <thead><tr><th scope="col">Nome</th><th scope="col">E-mail</th><th scope="col">Perfil</th><th scope="col">Cadastro</th></tr></thead>
+    <tbody>
+      <% users.each do |user| %>
+        <tr>
+          <td><%= user.name.presence || "Não informado" %></td>
+          <td><%= user.email %></td>
+          <td><%= user.admin? ? "Administrador" : "Usuário" %></td>
+          <td><%= user.created_at.strftime("%d/%m/%Y") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

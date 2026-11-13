@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title><%= content_for(:title) || "Fluxo | Controle financeiro" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "theme", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "authentication", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="auth-body">
+    <div class="auth-bg"></div>
+    <div class="auth-bg-orb auth-bg-orb-1"></div>
+    <div class="auth-bg-orb auth-bg-orb-2"></div>
+
+    <main class="auth-shell">
+      <div class="auth-content">
+        <%= render "shared/flash_messages" %>
+        <%= yield %>
+      </div>
+    </main>
+  </body>
+</html>

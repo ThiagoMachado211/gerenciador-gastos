@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  name: MyString
+  icon: MyString
+  color: "#30d988"
+
+two:
+  user: two
+  name: MyString
+  icon: MyString
+  color: "#f05252"

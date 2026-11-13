@@ -1,0 +1,37 @@
+service: gerenciador_gastos
+image: <%= ENV.fetch("KAMAL_IMAGE").to_json %>
+servers:
+  web:
+    - <%= ENV.fetch("DEPLOY_HOST").to_json %>
+proxy:
+  ssl: true
+  host: <%= ENV.fetch("APP_HOST").to_json %>
+  healthcheck:
+    path: /up
+registry:
+  server: <%= ENV.fetch("KAMAL_REGISTRY_SERVER", "ghcr.io").to_json %>
+  username: <%= ENV.fetch("KAMAL_REGISTRY_USERNAME").to_json %>
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+env:
+  secret:
+    - RAILS_MASTER_KEY
+    - DATABASE_URL
+    - SMTP_USERNAME
+    - SMTP_PASSWORD
+  clear:
+    APP_HOST: <%= ENV.fetch("APP_HOST").to_json %>
+    MAIL_FROM: <%= ENV.fetch("MAIL_FROM").to_json %>
+    SMTP_ADDRESS: <%= ENV.fetch("SMTP_ADDRESS").to_json %>
+    SMTP_PORT: <%= ENV.fetch("SMTP_PORT", "587").to_json %>
+    SMTP_AUTHENTICATION: <%= ENV.fetch("SMTP_AUTHENTICATION", "plain").to_json %>
+    ASSUME_SSL: "true"
+aliases:
+  console: app exec --interactive --reuse "bin/rails console"
+  shell: app exec --interactive --reuse "bash"
+  logs: app logs -f
+volumes:
+  - "gerenciador_gastos_storage:/rails/storage"
+asset_path: /rails/public/assets
+builder:
+  arch: amd64
